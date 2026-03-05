@@ -1,4 +1,5 @@
 from pydantic import BaseModel, Field
+from typing import Optional
 
 class EvadeStatsInput(BaseModel):
     evade: int = Field(..., gt=0)

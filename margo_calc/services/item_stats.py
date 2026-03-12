@@ -1,14 +1,22 @@
 
 def calculate_all_stats(level: int, amount_of_bon: int) -> float:
+    if amount_of_bon == 0:
+        return 0
     return 0.25 * level * amount_of_bon + 8
 
 def calculate_strength(level: int, amount_of_bon: int) -> float:
+    if amount_of_bon == 0:
+        return 0
     return 5 * level * amount_of_bon / 9 + 4
 
 def calculate_dexterity(level: int, amount_of_bon: int) -> float:
+    if amount_of_bon == 0:
+        return 0
     return 5 * level * amount_of_bon / 9 + 4
 
 def calculate_intellect(level: int, amount_of_bon: int) -> float:
+    if amount_of_bon == 0:
+        return 0
     return 5 * level * amount_of_bon / 9 + 4
 
 def calculate_attack_speed(level: int, amount_of_bon: int) -> float:

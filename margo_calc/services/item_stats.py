@@ -20,6 +20,8 @@ def calculate_intellect(level: int, amount_of_bon: int) -> float:
     return 5 * level * amount_of_bon / 9 + 4
 
 def calculate_attack_speed(level: int, amount_of_bon: int) -> float:
+    if amount_of_bon == 0:
+        return 0
     return 0.01 * round(8 + amount_of_bon * 0.25 * level)
 
 def calculate_health_points(level: int, amount_of_bon: int, level_power: float, class_power: float) -> float:
@@ -41,9 +43,13 @@ def calculate_evade(amount_of_bon: int, level: int) -> float:
     return amount_of_bon * level / 10
 
 def calculate_weapon_armor_destruction(amount_of_bon: int, level_power: float) -> float:
+    if amount_of_bon == 0:
+        return 0
     return 1 + amount_of_bon * level_power / 50
 
 def calculate_armor_destruction(amount_of_bon: int, level_power: float) -> float:
+    if amount_of_bon == 0:
+        return 0
     return 1 + amount_of_bon * 0.75 * level_power / 50
 
 def calculate_resist_destruction(amount_of_bon: int) -> int:
@@ -62,6 +68,8 @@ def calculate_energy(amount_of_bon: int, level: int) -> float:
     return amount_of_bon * (10 + level / 15)
 
 def calculate_attack_speed_reduction(amount_of_bon: int, level: int) -> float:
+    if amount_of_bon == 0:
+        return 0
     return 0.01 * round(8 + amount_of_bon * 2 * level / 7)
 
 def calculate_crit(amount_of_bon: int) -> int:

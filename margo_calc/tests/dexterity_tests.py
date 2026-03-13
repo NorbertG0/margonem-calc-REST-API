@@ -1,18 +1,38 @@
 import pytest
-from services.dexterity import *
+from services.dexterity import calculate_attack_speed, calculate_evade_gain
 
-def test_calculate_attack_speed_dexterity_cap():
-    assert calculate_attack_speed(0) == 0
-    assert calculate_attack_speed(1) == 0.02
-    assert calculate_attack_speed(100) == 2
+@pytest.mark.parametrize(
+    'dexterity, expected',
+    [
+        (0, 0),
+        (1, 0.02),
+        (100, 2)
+    ]
+)
+def test_calculate_attack_speed_dexterity_cap(dexterity, expected):
+    assert calculate_attack_speed(dexterity) == pytest.approx(expected)
 
-def test_calculate_attack_speed_normal_values():
-    assert calculate_attack_speed(101) == pytest.approx(2.002)
-    assert calculate_attack_speed(1000) == 3.8
-    assert calculate_attack_speed(3000) == 7.8
+@pytest.mark.parametrize(
+    'dexterity, expected',
+    [
+        (101, 2.002),
+        (1000, 3.8),
+        (3000, 7.8)
+    ]
+)
 
-def test_calculate_evade_gain():
-    assert calculate_evade_gain(0) == 0
-    assert calculate_evade_gain(1) == pytest.approx(0.03333333)
-    assert calculate_evade_gain(100) == pytest.approx(3.333333)
-    assert calculate_evade_gain(3000) == 100
+def test_calculate_attack_speed_normal_values(dexterity, expected):
+    assert calculate_attack_speed(dexterity) == pytest.approx(expected)
+
+@pytest.mark.parametrize(
+    'dexterity, expected',
+    [
+        (0, 0),
+        (1, 0.03333333),
+        (100, 3.333333),
+        (3000, 100)
+    ]
+)
+
+def test_calculate_evade_gain(dexterity, expected):
+    assert calculate_evade_gain(dexterity) == pytest.approx(expected)

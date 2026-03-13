@@ -1,54 +1,62 @@
 import pytest
 
-from services.item_defense import *
+from services.item_defense import calculate_item_armor
 
-def test_calculate_item_armor():
-    assert calculate_item_armor(0.11250, 1, 0, 2.62) == 2.358
-    assert calculate_item_armor(0.11250, 1, 1, 2.62) == 3.258
-    assert calculate_item_armor(0.11250, 1, 2, 2.62) == 4.158
-    assert calculate_item_armor(0.11250, 1, 3, 2.62) == 5.058
-    assert calculate_item_armor(0.11250, 1, 4, 2.62) == 5.958
+@pytest.mark.parametrize(
+    'armor_factor, class_power, rarity_power, level_power, expected',
+    [
+        (0.11250, 1, 0, 2.62, 2.358),
+        (0.11250, 1, 1, 2.62, 3.258),
+        (0.11250, 1, 2, 2.62, 4.158),
+        (0.11250, 1, 3, 2.62, 5.058),
+        (0.11250, 1, 4, 2.62, 5.958),
 
-    assert calculate_item_armor(0.11250, 0.33, 0, 2.62) == pytest.approx(0.778140)
-    assert calculate_item_armor(0.11250, 0.33, 1, 2.62) == pytest.approx(1.075140)
-    assert calculate_item_armor(0.11250, 0.33, 2, 2.62) == pytest.approx(1.372140)
-    assert calculate_item_armor(0.11250, 0.33, 3, 2.62) == pytest.approx(1.669140)
-    assert calculate_item_armor(0.11250, 0.33, 4, 2.62) == pytest.approx(1.966140)
+        (0.11250, 0.33, 0, 2.62, 0.778140),
+        (0.11250, 0.33, 1, 2.62, 1.075140),
+        (0.11250, 0.33, 2, 2.62, 1.372140),
+        (0.11250, 0.33, 3, 2.62, 1.669140),
+        (0.11250, 0.33, 4, 2.62, 1.966140),
 
-    assert calculate_item_armor(0.11250, 1, 0, 180) == 162.0
-    assert calculate_item_armor(0.11250, 1, 1, 180) == 162.9
-    assert calculate_item_armor(0.11250, 1, 2, 180) == 163.8
-    assert calculate_item_armor(0.11250, 1, 3, 180) == pytest.approx(164.70)
-    assert calculate_item_armor(0.11250, 1, 4, 180) == 165.6
+        (0.11250, 1, 0, 180, 162),
+        (0.11250, 1, 1, 180, 162.9),
+        (0.11250, 1, 2, 180, 163.8),
+        (0.11250, 1, 3, 180, 164.7),
+        (0.11250, 1, 4, 180, 165.6),
 
-    assert calculate_item_armor(0.11250, 0.33, 0, 180) == pytest.approx(53.460)
-    assert calculate_item_armor(0.11250, 0.33, 1, 180) == pytest.approx(53.757)
-    assert calculate_item_armor(0.11250, 0.33, 2, 180) == pytest.approx(54.054)
-    assert calculate_item_armor(0.11250, 0.33, 3, 180) == pytest.approx(54.351)
-    assert calculate_item_armor(0.11250, 0.33, 4, 180) == pytest.approx(54.648)
+        (0.11250, 0.33, 0, 180, 53.460),
+        (0.11250, 0.33, 1, 180, 53.757),
+        (0.11250, 0.33, 2, 180, 54.054),
+        (0.11250, 0.33, 3, 180, 54.351),
+        (0.11250, 0.33, 4, 180, 54.648),
 
-    assert calculate_item_armor(0.13500, 1, 0, 2.62) == 2.8296
-    assert calculate_item_armor(0.13500, 1, 1, 2.62) == 3.9096
-    assert calculate_item_armor(0.13500, 1, 2, 2.62) == 4.9896
-    assert calculate_item_armor(0.13500, 1, 3, 2.62) == 6.0696
-    assert calculate_item_armor(0.13500, 1, 4, 2.62) == 7.1496
+        (0.13500, 1, 0, 2.62, 2.8296),
+        (0.13500, 1, 1, 2.62, 3.9096),
+        (0.13500, 1, 2, 2.62, 4.9896),
+        (0.13500, 1, 3, 2.62, 6.0696),
+        (0.13500, 1, 4, 2.62, 7.1496),
 
-    assert calculate_item_armor(0.13500, 0.33, 0, 2.62) == pytest.approx(0.933768)
-    assert calculate_item_armor(0.13500, 0.33, 1, 2.62) == pytest.approx(1.290168)
-    assert calculate_item_armor(0.13500, 0.33, 2, 2.62) == pytest.approx(1.646568)
-    assert calculate_item_armor(0.13500, 0.33, 3, 2.62) == pytest.approx(2.002968)
-    assert calculate_item_armor(0.13500, 0.33, 4, 2.62) == pytest.approx(2.359368)
+        (0.13500, 0.33, 0, 2.62, 0.933768),
+        (0.13500, 0.33, 1, 2.62, 1.290168),
+        (0.13500, 0.33, 2, 2.62, 1.646568),
+        (0.13500, 0.33, 3, 2.62, 2.002968),
+        (0.13500, 0.33, 4, 2.62, 2.359368),
 
-    assert calculate_item_armor(0.13500, 1, 0, 180) == 194.4
-    assert calculate_item_armor(0.13500, 1, 1, 180) == pytest.approx(195.48)
-    assert calculate_item_armor(0.13500, 1, 2, 180) == 196.56
-    assert calculate_item_armor(0.13500, 1, 3, 180) == pytest.approx(197.64)
-    assert calculate_item_armor(0.13500, 1, 4, 180) == pytest.approx(198.72)
+        (0.13500, 1, 0, 180, 194.4),
+        (0.13500, 1, 1, 180, 195.48),
+        (0.13500, 1, 2, 180, 196.56),
+        (0.13500, 1, 3, 180, 197.64),
+        (0.13500, 1, 4, 180, 198.72),
 
-    assert calculate_item_armor(0.13500, 0.33, 0, 180) == pytest.approx(64.1520)
-    assert calculate_item_armor(0.13500, 0.33, 1, 180) == pytest.approx(64.5084)
-    assert calculate_item_armor(0.13500, 0.33, 2, 180) == pytest.approx(64.8648)
-    assert calculate_item_armor(0.13500, 0.33, 3, 180) == pytest.approx(65.2212)
-    assert calculate_item_armor(0.13500, 0.33, 4, 180) == pytest.approx(65.5776)
+        (0.13500, 0.33, 0, 180, 64.1520),
+        (0.13500, 0.33, 1, 180, 64.5084),
+        (0.13500, 0.33, 2, 180, 64.8648),
+        (0.13500, 0.33, 3, 180, 65.2212),
+        (0.13500, 0.33, 4, 180, 65.5776),
+    ]
+)
+
+def test_calculate_item_armor(armor_factor, class_power, rarity_power, level_power, expected):
+    assert calculate_item_armor(armor_factor, class_power, rarity_power, level_power) == pytest.approx(expected)
+
 
 

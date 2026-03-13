@@ -1,101 +1,133 @@
 import pytest
 from services.item_stats import *
 
-def test_calculate_all_stats():
-    assert calculate_all_stats(1, 0) == 0
-    assert calculate_all_stats(1, 1) == pytest.approx(8.25)
-    assert calculate_all_stats(1, 2) == pytest.approx(8.5)
-    assert calculate_all_stats(1, 3) == pytest.approx(8.75)
-    assert calculate_all_stats(1, 4) == pytest.approx(9)
-    assert calculate_all_stats(1, 5) == pytest.approx(9.25)
-    assert calculate_all_stats(1, 6) == pytest.approx(9.5)
 
-    assert calculate_all_stats(300, 0) == 0
-    assert calculate_all_stats(300, 1) == pytest.approx(83)
-    assert calculate_all_stats(300, 2) == pytest.approx(158)
-    assert calculate_all_stats(300, 3) == pytest.approx(233)
-    assert calculate_all_stats(300, 4) == pytest.approx(308)
-    assert calculate_all_stats(300, 5) == pytest.approx(383)
-    assert calculate_all_stats(300, 6) == pytest.approx(458)
+@pytest.mark.parametrize(
+    'level, amount_of_bon, expected',
+    [
+        (1, 0, 0),
+        (1, 1, 8.25),
+        (1, 2, 8.5),
+        (1, 3, 8.75),
+        (1, 4, 9),
+        (1, 5, 9.25),
+        (1, 6, 9.5),
+        (300, 0, 0),
+        (300, 1, 83),
+        (300, 2, 158),
+        (300, 3, 233),
+        (300, 4, 308),
+        (300, 5, 383),
+        (300, 6, 458),
+    ],
+)
 
-def test_calculate_strength():
-    assert calculate_strength(1, -2) == pytest.approx(2.888888)
-    assert calculate_strength(1, -1) == pytest.approx(3.444444)
-    assert calculate_strength(1, 0) == 0
-    assert calculate_strength(1, 1) == pytest.approx(4.555555)
-    assert calculate_strength(1, 2) == pytest.approx(5.111111)
-    assert calculate_strength(1, 3) == pytest.approx(5.666666)
-    assert calculate_strength(1, 4) == pytest.approx(6.222222)
-    assert calculate_strength(1, 5) == pytest.approx(6.777777)
-    assert calculate_strength(1, 6) == pytest.approx(7.333333)
+def test_calculate_all_stats(level, amount_of_bon, expected):
+    assert calculate_all_stats(level, amount_of_bon) == pytest.approx(expected)
 
-    assert calculate_strength(300, -2) == pytest.approx(-329.333333)
-    assert calculate_strength(300, -1) == pytest.approx(-162.666666)
-    assert calculate_strength(300, 0) == 0
-    assert calculate_strength(300, 1) == pytest.approx(170.666666)
-    assert calculate_strength(300, 2) == pytest.approx(337.333333)
-    assert calculate_strength(300, 3) == pytest.approx(504)
-    assert calculate_strength(300, 4) == pytest.approx(670.666666)
-    assert calculate_strength(300, 5) == pytest.approx(837.333333)
-    assert calculate_strength(300, 6) == pytest.approx(1004.0)
 
-def test_calculate_dexterity():
-    assert calculate_dexterity(1, -2) == pytest.approx(2.888888)
-    assert calculate_dexterity(1, -1) == pytest.approx(3.444444)
-    assert calculate_dexterity(1, 0) == 0
-    assert calculate_dexterity(1, 1) == pytest.approx(4.555555)
-    assert calculate_dexterity(1, 2) == pytest.approx(5.111111)
-    assert calculate_dexterity(1, 3) == pytest.approx(5.666666)
-    assert calculate_dexterity(1, 4) == pytest.approx(6.222222)
-    assert calculate_dexterity(1, 5) == pytest.approx(6.777777)
-    assert calculate_dexterity(1, 6) == pytest.approx(7.333333)
+@pytest.mark.parametrize(
+    'level, amount_of_bon, expected',
+    [
+        (1, -2, 2.888888),
+        (1, -1, 3.444444),
+        (1, 0, 0),
+        (1, 1, 4.555555),
+        (1, 2, 5.111111),
+        (1, 3, 5.666666),
+        (1, 4, 6.222222),
+        (1, 5, 6.777777),
+        (1, 6, 7.333333),
+        (300, -2, -329.333333),
+        (300, -1, -162.666666),
+        (300, 0, 0),
+        (300, 1, 170.666666),
+        (300, 2, 337.333333),
+        (300, 3, 504),
+        (300, 4, 670.666666),
+        (300, 5, 837.333333),
+        (300, 6, 1004.0),
+    ],
+)
 
-    assert calculate_dexterity(300, -2) == pytest.approx(-329.333333)
-    assert calculate_dexterity(300, -1) == pytest.approx(-162.666666)
-    assert calculate_dexterity(300, 0) == 0
-    assert calculate_dexterity(300, 1) == pytest.approx(170.666666)
-    assert calculate_dexterity(300, 2) == pytest.approx(337.333333)
-    assert calculate_dexterity(300, 3) == pytest.approx(504.0)
-    assert calculate_dexterity(300, 4) == pytest.approx(670.666666)
-    assert calculate_dexterity(300, 5) == pytest.approx(837.333333)
-    assert calculate_dexterity(300, 6) == pytest.approx(1004)
+def test_calculate_strength(level, amount_of_bon, expected):
+    assert calculate_strength(level, amount_of_bon) == pytest.approx(expected)
 
-def test_calculate_intellect():
-    assert calculate_intellect(1, -2) == pytest.approx(2.888888)
-    assert calculate_intellect(1, -1) == pytest.approx(3.444444)
-    assert calculate_intellect(1, 0) == 0
-    assert calculate_intellect(1, 1) == pytest.approx(4.555555)
-    assert calculate_intellect(1, 2) == pytest.approx(5.111111)
-    assert calculate_intellect(1, 3) == pytest.approx(5.666666)
-    assert calculate_intellect(1, 4) == pytest.approx(6.222222)
-    assert calculate_intellect(1, 5) == pytest.approx(6.777777)
-    assert calculate_intellect(1, 6) == pytest.approx(7.333333)
+@pytest.mark.parametrize(
+    'level, amount_of_bon, expected',
+    [
+        (1, -2, 2.888888),
+        (1, -1, 3.444444),
+        (1, 0, 0),
+        (1, 1, 4.555555),
+        (1, 2, 5.111111),
+        (1, 3, 5.666666),
+        (1, 4, 6.222222),
+        (1, 5, 6.777777),
+        (1, 6, 7.333333),
+        (300, -2, -329.333333),
+        (300, -1, -162.666666),
+        (300, 0, 0),
+        (300, 1, 170.666666),
+        (300, 2, 337.333333),
+        (300, 3, 504),
+        (300, 4, 670.666666),
+        (300, 5, 837.333333),
+        (300, 6, 1004.0),
+    ]
+)
 
-    assert calculate_intellect(300, -2) == pytest.approx(-329.333333)
-    assert calculate_intellect(300, -1) == pytest.approx(-162.666666)
-    assert calculate_intellect(300, 0) == 0
-    assert calculate_intellect(300, 1) == pytest.approx(170.666666)
-    assert calculate_intellect(300, 2) == pytest.approx(337.333333)
-    assert calculate_intellect(300, 3) == pytest.approx(504.0)
-    assert calculate_intellect(300, 4) == pytest.approx(670.666666)
-    assert calculate_intellect(300, 5) == pytest.approx(837.333333)
-    assert calculate_intellect(300, 6) == pytest.approx(1004)
+def test_calculate_dexterity(level, amount_of_bon, expected):
+    assert calculate_dexterity(level, amount_of_bon) == pytest.approx(expected)
 
-def test_calcuate_attack_speed():
-    assert calculate_attack_speed(1, -2) == pytest.approx(0.08)
-    assert calculate_attack_speed(1, -1) == pytest.approx(0.08)
-    assert calculate_attack_speed(1, 0) == 0
-    assert calculate_attack_speed(1, 1) == pytest.approx(0.08)
-    assert calculate_attack_speed(1, 2) == pytest.approx(0.08)
-    assert calculate_attack_speed(1, 3) == pytest.approx(0.09)
-    assert calculate_attack_speed(1, 4) == pytest.approx(0.09)
-    assert calculate_attack_speed(1, 5) == pytest.approx(0.09)
+@pytest.mark.parametrize(
+    'level, amount_of_bon, expected',
+    [
+        (1, -2, 2.888888),
+        (1, -1, 3.444444),
+        (1, 0, 0),
+        (1, 1, 4.555555),
+        (1, 2, 5.111111),
+        (1, 3, 5.666666),
+        (1, 4, 6.222222),
+        (1, 5, 6.777777),
+        (1, 6, 7.333333),
+        (300, -2, -329.333333),
+        (300, -1, -162.666666),
+        (300, 0, 0),
+        (300, 1, 170.666666),
+        (300, 2, 337.333333),
+        (300, 3, 504),
+        (300, 4, 670.666666),
+        (300, 5, 837.333333),
+        (300, 6, 1004.0),
+    ]
+)
 
-    assert calculate_attack_speed(300, -2) == pytest.approx(-1.42)
-    assert calculate_attack_speed(300, -1) == pytest.approx(-0.67)
-    assert calculate_attack_speed(300, 0) == 0
-    assert calculate_attack_speed(300, 1) == pytest.approx(0.83)
-    assert calculate_attack_speed(300, 2) == pytest.approx(1.58)
-    assert calculate_attack_speed(300, 3) == pytest.approx(2.33)
-    assert calculate_attack_speed(300, 4) == pytest.approx(3.08)
-    assert calculate_attack_speed(300, 5) == pytest.approx(3.83)
+def test_calculate_intellect(level, amount_of_bon, expected):
+    assert calculate_intellect(level, amount_of_bon) == pytest.approx(expected)
+
+@pytest.mark.parametrize(
+    'level, amount_of_bon, expected',
+    [
+        (1, -2, 0.08),
+        (1, -1, 0.08),
+        (1, 0, 0),
+        (1, 1, 0.08),
+        (1, 2, 0.08),
+        (1, 3, 0.09),
+        (1, 4, 0.09),
+        (1, 5, 0.09),
+        (300, -2, -1.42),
+        (300, -1, -0.67),
+        (300, 0, 0),
+        (300, 1, 0.83),
+        (300, 2, 1.58),
+        (300, 3, 2.33),
+        (300, 4, 3.08),
+        (300, 5, 3.83),
+    ]
+)
+
+def test_calcuate_attack_speed(level, amount_of_bon, expected):
+    assert calculate_attack_speed(level, amount_of_bon) == pytest.approx(expected)

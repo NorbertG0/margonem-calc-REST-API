@@ -1,11 +1,238 @@
-# Test your FastAPI endpoints
 
-GET http://127.0.0.1:8000/
-Accept: application/json
+POST http://127.0.0.1:8000/api/v1/base-stats
+Content-Type: application/json
+
+{
+  "level": 250
+}
+
+###
+
+POST http://127.0.0.1:8000/api/v1/strength
+Content-Type: application/json
+
+{
+  "strength": 100,
+  "level": 25,
+  "armor_level": 25
+}
 
 ###
 
-GET http://127.0.0.1:8000/hello/User
-Accept: application/json
+POST http://127.0.0.1:8000/api/v1/intellect
+Content-Type: application/json
+
+{
+  "intellect": 100,
+  "level": 25
+}
 
 ###
+
+POST http://127.0.0.1:8000/api/v1/dexterity
+Content-Type: application/json
+
+{
+  "dexterity": 100,
+  "level": 25
+}
+
+###
+
+POST http://127.0.0.1:8000/api/v1/evade
+Content-Type: application/json
+
+{
+  "evade": 120,
+  "enemy_level": 50
+}
+
+###
+
+POST http://127.0.0.1:8000/api/v1/block
+Content-Type: application/json
+
+{
+  "block": 120,
+  "enemy_level": 50
+}
+
+###
+
+POST http://127.0.0.1:8000/api/v1/item-power
+Content-Type: application/json
+
+{
+  "level": 250,
+  "rarity_factor": 4
+}
+
+###
+
+POST http://127.0.0.1:8000/api/v1/weapon-damage
+Content-Type: application/json
+
+{
+  "weapon_factor": 1,
+  "item_rarity_power": 1,
+  "item_level_power": 1,
+  "item_damage_spread": 1
+}
+
+###
+
+POST http://127.0.0.1:8000/api/v1/weapon-slow
+Content-Type: application/json
+
+{
+  "slow_factor": 1,
+  "item_level": 150
+}
+
+###
+
+POST http://127.0.0.1:8000/api/v1/physical-damage-reduction
+Content-Type: application/json
+
+{
+  "damage_in": 1500,
+  "armor": 120
+}
+
+###
+
+POST http://127.0.0.1:8000/api/v1/range-damage-reduction
+Content-Type: application/json
+
+{
+  "damage_in": 1500,
+  "armor": 120
+}
+
+###
+
+POST http://127.0.0.1:8000/api/v1/secondary-damage-reduction
+Content-Type: application/json
+
+{
+  "damage_in": 1500,
+  "armor": 120
+}
+
+###
+
+POST http://127.0.0.1:8000/api/v1/fire-damage-reduction
+Content-Type: application/json
+
+{
+  "damage_in": 1500,
+  "armor": 120
+}
+
+###
+
+POST http://127.0.0.1:8000/api/v1/frost-damage-redution
+Content-Type: application/json
+
+{
+  "damage_in": 1500,
+  "armor": 120
+}
+
+###
+
+POST http://127.0.0.1:8000/api/v1/light-damage-reduction
+Content-Type: application/json
+
+{
+  "damage_in": 1500,
+  "armor": 120
+}
+
+###
+
+POST http://127.0.0.1:8000/api/v1/crit-chance-gain
+Content-Type: application/json
+
+{
+  "player_level": 160,
+  "enemy_level": 120
+}
+
+###
+
+POST http://127.0.0.1:8000/api/v1/crit-power-gain
+Content-Type: application/json
+
+{
+  "player_level": 160,
+  "enemy_level": 120
+}
+
+###
+
+POST http://127.0.0.1:8000/api/v1/item-armor
+Content-Type: application/json
+
+{
+  "armor_factor": 1,
+  "class_power": 1,
+  "rarity_power": 1,
+  "level_power": 1
+}
+
+###
+
+POST http://127.0.0.1:8000/api/v1/item-stats
+Content-Type: application/json
+
+{
+  "level": 120,
+  "level_power": 1,
+  "class_power": 1
+}
+
+###
+
+POST http://127.0.0.1:8000/api/v1/legendary-bonus/expiration
+Content-Type: application/json
+
+{
+  "item_level": 250
+}
+
+###
+
+GET http://127.0.0.1:8000/api/v1/legendary-bonus/bonuses
+Content-Type: application/json
+
+###
+
+POST http://127.0.0.1:8000/api/v1/legendary-bonus/very-crit
+Content-Type: application/json
+
+{
+  "crit_chance": 43,
+  "crit_power": 1.5
+}
+
+###
+
+POST http://127.0.0.1:8000/api/v1/legendary-bonus/holy-touch
+Content-Type: application/json
+
+{
+  "hp": 25000
+}
+
+###
+
+POST http://127.0.0.1:8000/api/v1/legendary-bonus/anguish
+Content-Type: application/json
+
+{
+  "level": 120,
+  "strength": 1100,
+  "intellect": 100,
+  "agility": 1300
+}

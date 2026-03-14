@@ -1,0 +1,4 @@
+slowapi
+pydantic
+fastapi[standard]
+pytest

@@ -4,6 +4,9 @@ from typing import Optional
 class HeroLevelStatsInput(BaseModel):
     level: int = Field(..., gt=0)
 
+class HeroExpAmountInput(BaseModel):
+    level: int = Field(..., gt=0)
+
 class StrengthStatsInput(BaseModel):
     strength: int = Field(..., gt=0)
     level: int = Field(..., gt=1)

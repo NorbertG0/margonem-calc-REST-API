@@ -47,6 +47,12 @@ def calculate_base_hp(data: HeroLevelStatsInput):
         'base_crit_value': base_crit_value
     }
 
+@router.post('/exp-amount', tags=[stats_tag], response_model=HeroExpAmountResult)
+def calculate_exp_amount(data: HeroExpAmountInput):
+    exp_amount = hero_level_service.calculate_exp_amount(data.level)
+
+    return {'exp_amount': exp_amount}
+
 @router.post('/strength', tags=[stats_tag], response_model=StrengthStatsResult)
 def calculate_strength_stats(data: StrengthStatsInput):
     base_hp = strength_service.calculate_base_hp(data.strength)

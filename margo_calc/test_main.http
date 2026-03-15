@@ -13,6 +13,15 @@ Content-Type: application/json
 
 ###
 
+POST http://127.0.0.1:8000/api/v1/exp-amount
+Content-Type: application/json
+
+{
+  "level": 250
+}
+
+###
+
 POST http://127.0.0.1:8000/api/v1/strength
 Content-Type: application/json
 

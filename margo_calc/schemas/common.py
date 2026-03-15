@@ -4,6 +4,9 @@ class HeroLevelStatsResult(BaseModel):
     base_hp: float
     base_crit_value: float
 
+class HeroExpAmountResult(BaseModel):
+    exp_amount: float
+
 class StrengthStatsResult(BaseModel):
     base_hp_gain: float
     armor_hp_gain: float

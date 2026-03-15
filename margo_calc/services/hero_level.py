@@ -3,6 +3,9 @@ from additional_functions import sign
 def calculate_base_hp(level: int) -> float:
     return 20 * min(level, 300) ** 1.375
 
+def calculate_exp_amount(level: int) -> float:
+    return (level - 1)**4 + 10
+
 def calculate_base_crit_value(level: int) -> float:
     return 1 + 0.02 * level
 

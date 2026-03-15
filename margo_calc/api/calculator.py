@@ -53,6 +53,12 @@ def calculate_exp_amount(data: HeroExpAmountInput):
 
     return {'exp_amount': exp_amount}
 
+@router.post('/experience', tags=[stats_tag], response_model=HeroExperienceResult)
+def calculate_experience(data: HeroExperienceInput):
+    experience = hero_level_service.calculate_experience(data.player_level, data.npc_level)
+
+    return {'experience': experience}
+
 @router.post('/strength', tags=[stats_tag], response_model=StrengthStatsResult)
 def calculate_strength_stats(data: StrengthStatsInput):
     base_hp = strength_service.calculate_base_hp(data.strength)

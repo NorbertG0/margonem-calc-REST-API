@@ -6,6 +6,9 @@ def calculate_base_hp(level: int) -> float:
 def calculate_exp_amount(level: int) -> float:
     return (level - 1)**4 + 10
 
+def calculate_experience(player_level: int, npc_level: int) -> float:
+    return npc_level**1.80276 * (1 - 0.04 * max(0, (player_level - npc_level)))
+
 def calculate_base_crit_value(level: int) -> float:
     return 1 + 0.02 * level
 

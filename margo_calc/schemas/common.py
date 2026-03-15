@@ -7,6 +7,9 @@ class HeroLevelStatsResult(BaseModel):
 class HeroExpAmountResult(BaseModel):
     exp_amount: float
 
+class HeroExperienceResult(BaseModel):
+    experience: float
+
 class StrengthStatsResult(BaseModel):
     base_hp_gain: float
     armor_hp_gain: float

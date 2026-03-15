@@ -7,6 +7,10 @@ class HeroLevelStatsInput(BaseModel):
 class HeroExpAmountInput(BaseModel):
     level: int = Field(..., gt=0)
 
+class HeroExperienceInput(BaseModel):
+    player_level: int = Field(..., gt=0)
+    npc_level: int = Field(..., gt=0)
+
 class StrengthStatsInput(BaseModel):
     strength: int = Field(..., gt=0)
     level: int = Field(..., gt=1)

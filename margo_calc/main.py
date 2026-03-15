@@ -2,9 +2,10 @@ from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 from slowapi.middleware import SlowAPIMiddleware
 from slowapi.errors import RateLimitExceeded
+
+from api import calculator
 from limiter import limiter
-from api.calculator import router
-from api.calculator import legendary_bonus_router
+from api.calculator import router, legendary_bonus_router, config_router
 
 app = FastAPI()
 
@@ -18,3 +19,4 @@ async def ratelimit_handler(request: Request, exc):
 
 app.include_router(router)
 app.include_router(legendary_bonus_router)
+app.include_router(config_router)

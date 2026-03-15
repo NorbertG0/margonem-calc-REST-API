@@ -1,4 +1,5 @@
 from fastapi import APIRouter, Request
+from datetime import datetime
 
 from schemas.basic_stats import *
 from schemas.common import *
@@ -25,10 +26,16 @@ RANGE_0_5 = range(0, 6)
 version = 'v1'
 router = APIRouter(prefix=f'/api/{version}')
 legendary_bonus_router = APIRouter(prefix=f'/api/{version}/legendary-bonus')
+config_router = APIRouter(prefix=f'/api/{version}/config')
 
+config_tag = 'Config'
 stats_tag = 'Hero stats'
 item_tag = 'Items stats'
 legendary_bonus_tag = 'Legendary bonuses'
+
+@config_router.get('/health', tags=[config_tag])
+def health():
+    return {'status': 'ok'}
 
 @router.post('/base-stats', tags=[stats_tag], response_model=HeroLevelStatsResult)
 def calculate_base_hp(data: HeroLevelStatsInput):

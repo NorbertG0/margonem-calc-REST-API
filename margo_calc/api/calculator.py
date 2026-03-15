@@ -178,76 +178,8 @@ def calculate_item_armor(data: ItemArmorStatsInput):
 
 @router.post('/item-stats', tags=[item_tag], response_model=ItemStatsResult)
 def calculate_item_stats(data: ItemStatsInput):
+    return item_stats_service.calculate_item_stats(data)
 
-    all_stats = calculate_range(range(0, 7), lambda a: item_stats_service.calculate_all_stats(data.level, a))
-    strength = calculate_range(RANGE_NEG2_5, lambda a: item_stats_service.calculate_strength(data.level, a))
-    dexterity = calculate_range(RANGE_NEG2_5, lambda a: item_stats_service.calculate_dexterity(data.level, a))
-    intellect = calculate_range(RANGE_NEG2_5, lambda a: item_stats_service.calculate_intellect(data.level, a))
-    attack_speed = calculate_range(RANGE_NEG2_5, lambda a: item_stats_service.calculate_attack_speed(data.level, a))
-
-    level_power = data.level_power or 1
-    class_power = data.class_power or 1
-
-    health_points = calculate_range(range(-2, 7), lambda a: item_stats_service.calculate_health_points(data.level, a, level_power, class_power))
-    heal = calculate_range(range(0, 4), lambda a: item_stats_service.calculate_heal(data.level, a, level_power, class_power))
-    armor = calculate_range(RANGE_NEG2_5, lambda a: item_stats_service.calculate_armor(a, level_power, class_power))
-    poison_resistance = calculate_range(RANGE_NEG2_5, lambda a: item_stats_service.calculate_poison_res(a))
-    evade = calculate_range(RANGE_NEG2_5, lambda a: item_stats_service.calculate_evade(a, data.level))
-    block = calculate_range(range(-1, 6), lambda a: item_stats_service.calculate_block(a, data.level))
-    weapon_armor_destruction = calculate_range(RANGE_0_5, lambda a: item_stats_service.calculate_weapon_armor_destruction(a, level_power))
-    armor_destruction = calculate_range(RANGE_0_5, lambda a: item_stats_service.calculate_armor_destruction(a, level_power))
-    resistance_destruction = calculate_range(RANGE_0_5, lambda a: item_stats_service.calculate_resist_destruction(a))
-    absorption = calculate_range(RANGE_0_5, lambda a: item_stats_service.calculate_absorption(a, level_power, class_power))
-    magic_absorption = calculate_range(RANGE_0_5, lambda a: item_stats_service.calculate_magic_absorption(a, level_power, class_power))
-    mana = calculate_range(RANGE_0_5, lambda a: item_stats_service.calculate_mana(a, data.level))
-    energy = calculate_range(RANGE_0_5, lambda a: item_stats_service.calculate_energy(a, data.level))
-    attack_speed_reduction = calculate_range(RANGE_0_5, lambda a: item_stats_service.calculate_attack_speed_reduction(a, data.level))
-    crit = calculate_range(RANGE_0_5, lambda a: item_stats_service.calculate_crit(a))
-    physical_crit_power = calculate_range(RANGE_NEG2_5, lambda a: item_stats_service.calculate_phisycal_crit_power(a))
-    magic_crit_power = calculate_range(RANGE_NEG2_5, lambda a: item_stats_service.calculate_magic_crit_power(a))
-    crit_chance_reduction = calculate_range(range(0, 4), lambda a: item_stats_service.calculate_crit_chance_reduction(a))
-    energy_reduction_chance = calculate_range(range(0, 4), lambda a: item_stats_service.calculate_energy_reduction_chance(a))
-    energy_reduction_value = item_stats_service.calculate_energy_reduction_value(data.level)
-    mana_reduction_chance = calculate_range(range(0, 4), lambda a: item_stats_service.calculate_mana_reduction_chance(a))
-    mana_reduction_value = item_stats_service.calculate_mana_reduction_value(data.level)
-    evade_reduction = calculate_range(RANGE_0_5, lambda a: item_stats_service.calculate_evade_reduction(a, data.level))
-    fire_resists = calculate_range(range(-3, 11), lambda a: item_stats_service.calculate_fire_resists(a))
-    frost_resists = calculate_range(range(-3, 11), lambda a: item_stats_service.calculate_frost_resists(a))
-    light_resists = calculate_range(range(-3, 11), lambda a: item_stats_service.calculate_light_resists(a))
-
-    return {
-        'all_stats': all_stats,
-        'strength': strength,
-        'dexterity': dexterity,
-        'intellect': intellect,
-        'attack_speed': attack_speed,
-        'health_points': health_points,
-        'heal': heal,
-        'armor': armor,
-        'poison_resistance': poison_resistance,
-        'block': block,
-        'evade': evade,
-        'weapon_armor_destruction': weapon_armor_destruction,
-        'armor_destruction': armor_destruction,
-        'resistance_destruction': resistance_destruction,
-        'absorption': absorption,
-        'magic_absorption': magic_absorption,
-        'mana': mana,
-        'energy': energy,
-        'attack_speed_reduction': attack_speed_reduction,
-        'crit': crit,
-        'physical_crit_power': physical_crit_power,
-        'magic_crit_power': magic_crit_power,
-        'crit_chance_reduction': crit_chance_reduction,
-        'energy_reduction_chance': energy_reduction_chance,
-        'energy_reduction_value': energy_reduction_value,
-        'mana_reduction_chance': mana_reduction_chance,
-        'mana_reduction_value': mana_reduction_value,
-        'evade_reduction': evade_reduction,
-        'fire_resists': fire_resists,
-        'frost_resists': frost_resists,
-        'light_resists': light_resists,
-    }
 
 @router.post('/legendary-bonus/expiration', tags=[legendary_bonus_tag], response_model=LegendaryBonusResult)
 def calculate_legendary_bonus_expiration(data: LegendaryBonusInput):

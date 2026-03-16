@@ -11,7 +11,7 @@ from services.strength import calculate_base_hp, calculate_armor_hp, calculate_c
 )
 
 # BASE HP TESTS
-def test_calculate_base_hp(strength, expected):
+def test_calculate_base_hp(strength: int, expected: int) -> None:
     assert calculate_base_hp(strength) == expected
 
 @pytest.mark.parametrize(
@@ -44,7 +44,7 @@ def test_calculate_base_hp(strength, expected):
     ]
 )
 # ARMOR HP GAINS TESTS
-def test_calculate_armor_hp(strength, armor_level, expected):
+def test_calculate_armor_hp(strength: int, armor_level: int, expected: int) -> None:
     assert calculate_armor_hp(strength, armor_level) == expected
 
 @pytest.mark.parametrize(
@@ -84,6 +84,6 @@ def test_calculate_armor_hp(strength, armor_level, expected):
     ]
 )
 # CRIT VALUE TESTS
-def test_calculate_crit_value(strength, level, expected):
+def test_calculate_crit_value(strength: int, level: int, expected: float) -> None:
     assert calculate_crit_value(strength, level) == pytest.approx(expected)
 

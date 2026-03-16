@@ -55,7 +55,7 @@ from services.item_defense import calculate_item_armor
     ]
 )
 
-def test_calculate_item_armor(armor_factor, class_power, rarity_power, level_power, expected):
+def test_calculate_item_armor(armor_factor: float, class_power: float, rarity_power: int, level_power: float, expected: float) -> None:
     assert calculate_item_armor(armor_factor, class_power, rarity_power, level_power) == pytest.approx(expected)
 
 

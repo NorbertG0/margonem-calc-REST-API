@@ -11,7 +11,7 @@ import pytest
     ]
 )
 
-def test_calculate_first_nerf_level(level, expected):
+def test_calculate_first_nerf_level(level: int, expected: int) -> None:
     assert calculate_first_nerf_level(level) == expected
 
 @pytest.mark.parametrize(
@@ -24,7 +24,7 @@ def test_calculate_first_nerf_level(level, expected):
     ]
 )
 
-def test_calculate_legendary_bonus_expiration(level, expected):
+def test_calculate_legendary_bonus_expiration(level: int, expected: int) -> None:
     assert calculate_legendary_bonus_expiration(level) == expected
 
 @pytest.mark.parametrize(
@@ -37,7 +37,7 @@ def test_calculate_legendary_bonus_expiration(level, expected):
     ]
 )
 
-def test_calculate_very_crit_chance(crit_chance, expected):
+def test_calculate_very_crit_chance(crit_chance: int, expected: float) -> None:
     assert calculate_very_crit_chance(crit_chance) == pytest.approx(expected)
 
 @pytest.mark.parametrize(
@@ -50,7 +50,7 @@ def test_calculate_very_crit_chance(crit_chance, expected):
     ]
 )
 
-def test_calculate_holy_touch_heal_value(hp, expected):
+def test_calculate_holy_touch_heal_value(hp: int, expected: int) -> None:
     assert calculate_holy_touch_heal_value(hp) == expected
 
 @pytest.mark.parametrize(
@@ -69,7 +69,7 @@ def test_calculate_holy_touch_heal_value(hp, expected):
         (300, 999, 999, 999, 2937.06),
     ]
 )
-def test_calculate_anguish_damage(level, strength, intellect, agility, expected):
+def test_calculate_anguish_damage(level: int, strength: int, intellect: int, agility: int, expected: float) -> None:
     assert calculate_anguish_damage(level, strength, intellect, agility) == pytest.approx(expected)
 
 

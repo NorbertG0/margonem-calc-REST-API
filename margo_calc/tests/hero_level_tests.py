@@ -12,7 +12,7 @@ import pytest
     ]
 )
 
-def test_calculate_base_hp(level, expected):
+def test_calculate_base_hp(level: int, expected: float) -> None:
     assert calculate_base_hp(level) == pytest.approx(expected)
 
 
@@ -25,8 +25,8 @@ def test_calculate_base_hp(level, expected):
     ]
 )
 
-def test_calculate_exp_amount(level, expected):
-    assert calculate_exp_amount(level) == pytest.approx(expected)
+def test_calculate_exp_amount(level: int, expected: int) -> None:
+    assert calculate_exp_amount(level) == expected
 
 @pytest.mark.parametrize(
     'player_level, npc_level, expected',
@@ -45,7 +45,7 @@ def test_calculate_exp_amount(level, expected):
     ]
 )
 
-def test_calculate_experience(player_level, npc_level, expected):
+def test_calculate_experience(player_level: int, npc_level: int, expected: float) -> None:
     assert calculate_experience(player_level, npc_level) == pytest.approx(expected)
 
 @pytest.mark.parametrize(
@@ -57,7 +57,7 @@ def test_calculate_experience(player_level, npc_level, expected):
     ]
 )
 
-def test_calculate_base_crit_value(level, expected):
+def test_calculate_base_crit_value(level: int, expected: float) -> None:
     assert calculate_base_crit_value(level) == pytest.approx(expected)
 
 @pytest.mark.parametrize(
@@ -83,7 +83,7 @@ def test_calculate_base_crit_value(level, expected):
     ]
 )
 
-def test_calculate_crit_chance_gain(player_level, enemy_level, expected):
+def test_calculate_crit_chance_gain(player_level: int, enemy_level: int, expected: int) -> None:
     assert calculate_crit_chance_gain(player_level, enemy_level) == expected
 
 @pytest.mark.parametrize(
@@ -103,9 +103,9 @@ def test_calculate_crit_chance_gain(player_level, enemy_level, expected):
 
         (301, 10, 300),
         (301, 100, 300),
-        (301, 200, 300)
+        (301, 200, 300),
     ]
 )
 
-def test_calculate_crit_power_gain(player_level, enemy_level, expected):
-    assert calculate_crit_power_gain(player_level, enemy_level) == pytest.approx(expected)
+def test_calculate_crit_power_gain(player_level: int, enemy_level: int, expected: int) -> None:
+    assert calculate_crit_power_gain(player_level, enemy_level) == expected

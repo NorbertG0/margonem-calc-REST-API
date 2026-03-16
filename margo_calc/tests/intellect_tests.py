@@ -10,8 +10,8 @@ from services.intellect import calculate_absorb_limit, calculate_crit_value
         (1000, 7000)
     ]
 )
-def test_calculate_absorb_limit(intellect, expected):
-    assert calculate_absorb_limit(intellect) == pytest.approx(expected)
+def test_calculate_absorb_limit(intellect: int, expected: int) -> None:
+    assert calculate_absorb_limit(intellect) == expected
 
 # CRIT VALUE TESTS
 @pytest.mark.parametrize(
@@ -33,8 +33,8 @@ def test_calculate_absorb_limit(intellect, expected):
         (100, 0, 0),
     ]
 )
-def test_calculate_crit_value_down_cap(intellect, level, expected):
-    assert calculate_crit_value(intellect, level) == pytest.approx(expected)
+def test_calculate_crit_value_down_cap(intellect: int, level: int, expected: int) -> None:
+    assert calculate_crit_value(intellect, level) == expected
 
 @pytest.mark.parametrize(
     'intellect, level, expected',
@@ -45,8 +45,8 @@ def test_calculate_crit_value_down_cap(intellect, level, expected):
         (0, 301, 0),
     ]
 )
-def test_calculate_crit_value_intellect_zero(intellect, level, expected):
-    assert calculate_crit_value(intellect, level) == pytest.approx(expected)
+def test_calculate_crit_value_intellect_zero(intellect: int, level: int, expected: int) -> None:
+    assert calculate_crit_value(intellect, level) == expected
 
 @pytest.mark.parametrize(
     'intellect, level, expected',
@@ -61,7 +61,7 @@ def test_calculate_crit_value_intellect_zero(intellect, level, expected):
     ]
 )
 
-def test_calculate_crit_value_normal_values(intellect, level, expected):
+def test_calculate_crit_value_normal_values(intellect: int, level: int, expected: float) -> None:
     assert calculate_crit_value(intellect, level) == pytest.approx(expected)
 
 @pytest.mark.parametrize(
@@ -72,5 +72,5 @@ def test_calculate_crit_value_normal_values(intellect, level, expected):
         (1, 1000, 0.0066666666),
     ]
 )
-def test_calculate_crit_value_up_level_cap(intellect, level, expected):
+def test_calculate_crit_value_up_level_cap(intellect: int, level: int, expected: float) -> None:
     assert calculate_crit_value(intellect, level) == pytest.approx(expected)

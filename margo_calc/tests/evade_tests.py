@@ -16,5 +16,5 @@ import pytest
     ]
 )
 
-def test_calculate_evade(evade, enemy_level, expected):
+def test_calculate_evade(evade: int, enemy_level: int, expected: float) -> None:
     assert calculate_evade(evade, enemy_level) == pytest.approx(expected)

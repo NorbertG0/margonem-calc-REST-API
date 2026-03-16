@@ -9,7 +9,7 @@ from services.dexterity import calculate_attack_speed, calculate_evade_gain
         (100, 2)
     ]
 )
-def test_calculate_attack_speed_dexterity_cap(dexterity, expected):
+def test_calculate_attack_speed_dexterity_cap(dexterity: int, expected: float) -> None:
     assert calculate_attack_speed(dexterity) == pytest.approx(expected)
 
 @pytest.mark.parametrize(
@@ -21,7 +21,7 @@ def test_calculate_attack_speed_dexterity_cap(dexterity, expected):
     ]
 )
 
-def test_calculate_attack_speed_normal_values(dexterity, expected):
+def test_calculate_attack_speed_normal_values(dexterity: int, expected: float) -> None:
     assert calculate_attack_speed(dexterity) == pytest.approx(expected)
 
 @pytest.mark.parametrize(
@@ -34,5 +34,5 @@ def test_calculate_attack_speed_normal_values(dexterity, expected):
     ]
 )
 
-def test_calculate_evade_gain(dexterity, expected):
+def test_calculate_evade_gain(dexterity: int, expected: float) -> None:
     assert calculate_evade_gain(dexterity) == pytest.approx(expected)

@@ -10,7 +10,7 @@ from services.item_power import calculate_item_rarity_power, calculate_item_leve
     ]
 )
 
-def test_calculate_item_level_power(level, expected):
+def test_calculate_item_level_power(level: int, expected: float) -> None:
     assert calculate_item_level_power(level) == pytest.approx(expected)
 
 @pytest.mark.parametrize(
@@ -38,7 +38,7 @@ def test_calculate_item_level_power(level, expected):
     ]
 )
 
-def test_calculate_item_rarity_power(level, rarity_factor, expected):
+def test_calculate_item_rarity_power(level: int, rarity_factor: int, expected: float) -> None:
     assert calculate_item_rarity_power(level, rarity_factor) == pytest.approx(expected)
 
 @pytest.mark.parametrize(
@@ -107,7 +107,7 @@ def test_calculate_item_rarity_power(level, rarity_factor, expected):
     ]
 )
 
-def test_calculate_weapon_damage(weapon_factor, item_rarity_power, item_level_power, expected):
+def test_calculate_weapon_damage(weapon_factor: float, item_rarity_power: int, item_level_power: float, expected: float) -> None:
     assert calculate_weapon_damage(weapon_factor, item_rarity_power, item_level_power) == pytest.approx(expected)
 
 @pytest.mark.parametrize(
@@ -131,5 +131,5 @@ def test_calculate_weapon_damage(weapon_factor, item_rarity_power, item_level_po
 
     ]
 )
-def test_calculate_weapon_slow(slow_factor, item_level, expected):
+def test_calculate_weapon_slow(slow_factor: float, item_level: int, expected: float) -> None:
     assert calculate_weapon_slow(slow_factor, item_level) == pytest.approx(expected)

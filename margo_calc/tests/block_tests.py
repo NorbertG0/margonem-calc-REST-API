@@ -16,5 +16,5 @@ from services.block import calculate_block
     ]
 )
 
-def test_calculate_block(level, enemy_level, expected):
+def test_calculate_block(level: int, enemy_level: int, expected: float) -> None:
     assert calculate_block(level, enemy_level) == pytest.approx(expected)

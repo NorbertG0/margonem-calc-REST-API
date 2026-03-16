@@ -24,7 +24,7 @@ from services.item_stats import (calculate_all_stats, calculate_strength, calcul
     ],
 )
 
-def test_calculate_all_stats(level, amount_of_bon, expected):
+def test_calculate_all_stats(level: int, amount_of_bon: int, expected: float) -> None:
     assert calculate_all_stats(level, amount_of_bon) == pytest.approx(expected)
 
 
@@ -53,7 +53,7 @@ def test_calculate_all_stats(level, amount_of_bon, expected):
     ],
 )
 
-def test_calculate_strength(level, amount_of_bon, expected):
+def test_calculate_strength(level: int, amount_of_bon: int, expected: float) -> None:
     assert calculate_strength(level, amount_of_bon) == pytest.approx(expected)
 
 @pytest.mark.parametrize(
@@ -81,7 +81,7 @@ def test_calculate_strength(level, amount_of_bon, expected):
     ]
 )
 
-def test_calculate_dexterity(level, amount_of_bon, expected):
+def test_calculate_dexterity(level: int, amount_of_bon: int, expected: float) -> None:
     assert calculate_dexterity(level, amount_of_bon) == pytest.approx(expected)
 
 @pytest.mark.parametrize(
@@ -109,7 +109,7 @@ def test_calculate_dexterity(level, amount_of_bon, expected):
     ]
 )
 
-def test_calculate_intellect(level, amount_of_bon, expected):
+def test_calculate_intellect(level: int, amount_of_bon: int, expected: float) -> None:
     assert calculate_intellect(level, amount_of_bon) == pytest.approx(expected)
 
 @pytest.mark.parametrize(
@@ -135,7 +135,7 @@ def test_calculate_intellect(level, amount_of_bon, expected):
     ]
 )
 
-def test_calculate_attack_speed(level, amount_of_bon, expected):
+def test_calculate_attack_speed(level: int, amount_of_bon: int, expected: float) -> None:
     assert calculate_attack_speed(level, amount_of_bon) == pytest.approx(expected)
 
 @pytest.mark.parametrize(
@@ -183,7 +183,7 @@ def test_calculate_attack_speed(level, amount_of_bon, expected):
     ],
 )
 
-def test_calculate_health_points(level, amount_of_bon, level_power, class_power, expected):
+def test_calculate_health_points(level: int, amount_of_bon: int, level_power: float, class_power: float, expected: float) -> None:
     assert calculate_health_points(level, amount_of_bon, level_power, class_power) == pytest.approx(expected)
 
 @pytest.mark.parametrize(
@@ -219,5 +219,5 @@ def test_calculate_health_points(level, amount_of_bon, level_power, class_power,
     ],
 )
 
-def test_calculate_heal(level, amount_of_bon, level_power, class_power, expected):
+def test_calculate_heal(level: int, amount_of_bon: int, level_power: float, class_power: float, expected: float) -> None:
     assert calculate_heal(level, amount_of_bon, level_power, class_power) == pytest.approx(expected)

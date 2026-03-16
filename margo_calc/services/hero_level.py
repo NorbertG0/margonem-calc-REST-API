@@ -19,7 +19,7 @@ def calculate_crit_chance_gain(player_level: int, enemy_level: int) -> int:
 
     return max(0, sign(diff) * max(abs(diff) - 5, 0) * 3)
 
-def calculate_crit_power_gain(player_level: int, enemy_level: int) -> float:
+def calculate_crit_power_gain(player_level: int, enemy_level: int) -> int:
     lvl_player = min(player_level, 300)
     lvl_enemy = min(enemy_level, 300)
     diff = lvl_player - lvl_enemy

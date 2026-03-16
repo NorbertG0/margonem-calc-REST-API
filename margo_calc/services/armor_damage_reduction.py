@@ -1,4 +1,3 @@
-from exceptions import ValidationError, MathError
 
 def calculate_physical_damage_reduction(damage: int, armor: int) -> float:
     return damage - armor * (1.13 - 0.31 * armor / damage)

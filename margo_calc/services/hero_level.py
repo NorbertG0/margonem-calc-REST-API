@@ -9,6 +9,14 @@ def calculate_exp_amount(level: int) -> float:
 def calculate_experience(player_level: int, npc_level: int) -> float:
     return max(0, npc_level**1.80276 * (1 - 0.04 * max(0, (player_level - npc_level))))
 
+def calculate_experience_penalty(player_level: int, npc_level: int) -> float:
+    return max(0, 0.04 * (player_level - npc_level))
+
+def calculate_highest_level_in_group(server_factor: float, level_ally_min: int) -> float:
+    if level_ally_min > 299:
+        return 500
+    return max(round((1 + server_factor) * level_ally_min) + 4, level_ally_min + 14)
+
 def calculate_base_crit_value(level: int) -> float:
     return 1 + 0.02 * level
 
@@ -25,3 +33,5 @@ def calculate_crit_power_gain(player_level: int, enemy_level: int) -> int:
     diff = lvl_player - lvl_enemy
 
     return max(0, min(300, sign(diff) * max(abs(diff) - 5, 0) * 10))
+
+

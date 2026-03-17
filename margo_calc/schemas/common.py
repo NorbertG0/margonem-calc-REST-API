@@ -10,6 +10,12 @@ class HeroExpAmountResult(BaseModel):
 class HeroExperienceResult(BaseModel):
     experience: float
 
+class ExperiencePenaltyResult(BaseModel):
+    experience_penalty: float
+
+class HighestLevelInGroupResult(BaseModel):
+    max_level: float
+
 class StrengthStatsResult(BaseModel):
     base_hp_gain: float
     armor_hp_gain: float

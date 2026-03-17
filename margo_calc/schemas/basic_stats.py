@@ -11,6 +11,14 @@ class HeroExperienceInput(BaseModel):
     player_level: int = Field(..., gt=0)
     npc_level: int = Field(..., gt=0)
 
+class ExperiencePenaltyInput(BaseModel):
+    player_level: int = Field(..., gt=0)
+    npc_level: int = Field(..., gt=0)
+
+class HighestLevelInGroupInput(BaseModel):
+    server_factor: float
+    level_ally_min: int
+
 class StrengthStatsInput(BaseModel):
     strength: int = Field(..., gt=0)
     level: int = Field(..., gt=1)

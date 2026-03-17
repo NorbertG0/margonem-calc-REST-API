@@ -59,6 +59,18 @@ def calculate_experience(data: HeroExperienceInput):
 
     return {'experience': experience}
 
+@router.post('/experience-penalty', tags=[stats_tag], response_model=ExperiencePenaltyResult)
+def calculate_experience_penalty(data: ExperiencePenaltyInput):
+    experience_penalty = hero_level_service.calculate_experience_penalty(data.player_level, data.npc_level)
+
+    return {'experience_penalty': experience_penalty}
+
+@router.post('/highest-level', tags=[stats_tag], response_model=HighestLevelInGroupResult)
+def calculate_highest_level_in_group(data: HighestLevelInGroupInput):
+    max_level = hero_level_service.calculate_highest_level_in_group(data.server_factor, data.level_ally_min)
+
+    return {'max_level': max_level}
+
 @router.post('/strength', tags=[stats_tag], response_model=StrengthStatsResult)
 def calculate_strength_stats(data: StrengthStatsInput):
     base_hp = strength_service.calculate_base_hp(data.strength)

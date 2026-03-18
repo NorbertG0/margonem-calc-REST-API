@@ -1,4 +1,5 @@
-slowapi
-pydantic
 fastapi[standard]
+loguru
+slowapi
 pytest
+pydantic

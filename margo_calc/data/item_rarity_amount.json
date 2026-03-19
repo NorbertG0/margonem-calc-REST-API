@@ -1,0 +1,101 @@
+{
+    "items_rarity_amount":
+        [
+            {
+                "monster_type": "Zwykły Potwór",
+                "empty_loot": "True",
+                "normal": "1-10",
+                "unique": "0-6",
+                "heroic": "0",
+                "legendary": "0"
+            },
+            {
+                "monster_type": "Elita",
+                "empty_loot": "True",
+                "normal": "1-4",
+                "unique": "2-6",
+                "heroic": "1-4",
+                "legendary": "0"
+            },
+            {
+                "monster_type": "Elita II",
+                "empty_loot": "True",
+                "normal": "1-8",
+                "unique": "6-12",
+                "heroic": "6-12",
+                "legendary": "3-4"
+            },
+            {
+                "monster_type": "Elita III",
+                "empty_loot": "False",
+                "normal": "0",
+                "unique": "3-6",
+                "heroic": "3-6",
+                "legendary": "1-2"
+            },
+            {
+                "monster_type": "Heros",
+                "empty_loot": "False",
+                "normal": "1",
+                "unique": "14-22",
+                "heroic": "14-22",
+                "legendary": "5"
+            },
+            {
+                "monster_type": "Kolos",
+                "empty_loot": "False",
+                "normal": "0",
+                "unique": "20-30",
+                "heroic": "15-25",
+                "legendary": "6-8"
+            },
+            {
+                "monster_type": "Tytan",
+                "empty_loot": "False",
+                "normal": "0",
+                "unique": "18-24",
+                "heroic": "18-24",
+                "legendary": "7"
+            },
+            {
+                "monster_type": "Elita Wędrująca",
+                "empty_loot": "False",
+                "normal": "0-2",
+                "unique": "1-6",
+                "heroic": "1-6",
+                "legendary": "0-3"
+            },
+            {
+                "monster_type": "Elita III Eventowa",
+                "empty_loot": "False",
+                "normal": "2-6",
+                "unique": "8-20",
+                "heroic": "8-20",
+                "legendary": "1-3"
+            },
+            {
+                "monster_type": "Heros Eventowy",
+                "empty_loot": "True",
+                "normal": "0",
+                "unique": "6-8",
+                "heroic": "6-8",
+                "legendary": "2-4"
+            },
+{
+                "monster_type": "Kolos Eventowy",
+                "empty_loot": "False",
+                "normal": "0",
+                "unique": "22",
+                "heroic": "22",
+                "legendary": "2-7"
+            },
+            {
+                "monster_type": "Tytan Eventowy",
+                "empty_loot": "False",
+                "normal": "0",
+                "unique": "22",
+                "heroic": "22",
+                "legendary": "2-7"
+            }
+        ]
+}

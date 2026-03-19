@@ -1,4 +1,7 @@
-from fastapi import APIRouter, Request
+import json
+from pathlib import Path
+
+from fastapi import APIRouter, Request, HTTPException
 from loguru import logger
 from datetime import datetime
 
@@ -17,8 +20,6 @@ from services import hero_level as hero_level_service
 from services import item_defense as item_defense_service
 from services import item_stats as item_stats_service
 from services import legendary_bonuses as legendary_bonus_service
-from services.legendary_bonuses import NAMES_AND_CHANCES
-from services.item_stats import LEGENDARY_BLESS_ITEM_CHANCE
 
 from additional_functions import calculate_range
 
@@ -36,6 +37,15 @@ config_tag = 'Config'
 stats_tag = 'Hero stats'
 item_tag = 'Items stats'
 legendary_bonus_tag = 'Legendary bonuses'
+
+BASE_DIR = Path(__file__).resolve().parent
+DATA_DIR = BASE_DIR.parent / "data"
+
+ALL_JSON_DATA = {}
+for file_path in DATA_DIR.glob("*.json"):
+    with open(file_path, "r", encoding="utf-8") as f:
+        key = file_path.stem
+        ALL_JSON_DATA[key] = json.load(f)
 
 @config_router.get('/health', tags=[config_tag])
 def health():
@@ -302,9 +312,19 @@ def calculate_item_stats(data: ItemStatsInput):
 
 @item_stats_router.get('/bless-legendary-chance', tags=[item_tag])
 def bless_legendary_chance():
-    logger.info(f'/bless-legendary-chance - Bless legendary items chance: {LEGENDARY_BLESS_ITEM_CHANCE}')
-    return LEGENDARY_BLESS_ITEM_CHANCE
+    key = 'legendary_bless_item_chance'
+    if key not in ALL_JSON_DATA:
+        raise HTTPException(status_code=404, detail=f'{key} not found in data folder')
+    logger.info(f'/bless-legendary-chance - Bless legendary items chance')
+    return ALL_JSON_DATA[key]
 
+@item_stats_router.get('/item-rarity-amount', tags=[item_tag])
+def item_rarity_amount():
+    key = 'item_rarity_amount'
+    if key not in ALL_JSON_DATA:
+        raise HTTPException(status_code=404, detail=f'{key} not found in data folder')
+    logger.info(f'/item-rarity-amount - Item rarity amount')
+    return ALL_JSON_DATA[key]
 
 @legendary_bonus_router.post('/expiration', tags=[legendary_bonus_tag], response_model=LegendaryBonusResult)
 def calculate_legendary_bonus_expiration(data: LegendaryBonusInput):
@@ -322,8 +342,11 @@ def calculate_legendary_bonus_expiration(data: LegendaryBonusInput):
 
 @legendary_bonus_router.get('/bonuses', tags=[legendary_bonus_tag])
 def legendary_bonuses_names_and_chances():
-    logger.info(f'/legendary-bonus/bonuses - Legendary bonuses: {NAMES_AND_CHANCES}')
-    return NAMES_AND_CHANCES
+    key = 'legendary_bonuses'
+    if key not in ALL_JSON_DATA:
+        raise HTTPException(status_code=404, detail=f'{key} not found in data folder')
+    logger.info(f'/legendary-bonus/bonuses - Legendary bonuses')
+    return ALL_JSON_DATA[key]
 
 @legendary_bonus_router.post('/very-crit', tags=[legendary_bonus_tag], response_model=VeryCritResult)
 def calculate_very_crit(data: VeryCritInput):

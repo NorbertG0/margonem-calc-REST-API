@@ -1,0 +1,84 @@
+{
+    "chances": [
+  {
+    "empty_loot_reduction": 0,
+    "legendary_chance": 0.06,
+    "multiplier": 1.0
+  },
+  {
+    "empty_loot_reduction": 5,
+    "legendary_chance": 0.063,
+    "multiplier": 1.05
+  },
+  {
+    "empty_loot_reduction": 10,
+    "legendary_chance": 0.066,
+    "multiplier": 1.10
+  },
+  {
+    "empty_loot_reduction": 20,
+    "legendary_chance": 0.072,
+    "multiplier": 1.20
+  },
+  {
+    "empty_loot_reduction": 25,
+    "legendary_chance": 0.075,
+    "multiplier": 1.25
+  },
+  {
+    "empty_loot_reduction": 50,
+    "legendary_chance": 0.090,
+    "multiplier": 1.50
+  },
+  {
+    "empty_loot_reduction": 55,
+    "legendary_chance": 0.093,
+    "multiplier": 1.55
+  },
+  {
+    "empty_loot_reduction": 60,
+    "legendary_chance": 0.096,
+    "multiplier": 1.60
+  },
+ {
+    "empty_loot_reduction": 65,
+    "legendary_chance": 0.099,
+    "multiplier": 1.65
+  },
+  {
+    "empty_loot_reduction": 70,
+    "legendary_chance": 0.102,
+    "multiplier": 1.70
+  },
+  {
+    "empty_loot_reduction": 75,
+    "legendary_chance": 0.105,
+    "multiplier": 1.75
+  },
+  {
+    "empty_loot_reduction": 80,
+    "legendary_chance": 0.108,
+    "multiplier": 1.80
+  },
+  {
+    "empty_loot_reduction": 85,
+    "legendary_chance": 0.111,
+    "multiplier": 1.85
+  },
+  {
+    "empty_loot_reduction": 90,
+    "legendary_chance": 0.114,
+    "multiplier": 1.90
+  },
+  {
+    "empty_loot_reduction": 95,
+    "legendary_chance": 0.117,
+    "multiplier": 1.95
+  },
+  {
+    "empty_loot_reduction": 100,
+    "legendary_chance": 0.120,
+    "multiplier": 2.00
+  }
+]
+}

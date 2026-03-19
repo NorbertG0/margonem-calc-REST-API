@@ -1,16 +1,4 @@
 
-NAMES_AND_CHANCES = {
-    'very_crit': ['Cios bardzo krytyczny', 0.17],
-    'holy_touch': ['Dotyk anioła', 0.07],
-    'curse': ['Klątwa', 0.09],
-    'glare': ['Oślepienie', 0.09],
-    'last_heal': ['Ostatni ratunek', 0.18],
-    'critred': ['Krytyczna osłona', 0.25],
-    'facade': ['Fasada opieki', 0.13],
-    'cleanse': ['Płomienne oczyszczenie', 0.12],
-    'anguish': ['Krwawa udręka', 0.08],
-    'puncture': ['Przeszywająca skuteczność', 0.12]
-}
 
 
 def calculate_first_nerf_level(item_level: int) -> float:

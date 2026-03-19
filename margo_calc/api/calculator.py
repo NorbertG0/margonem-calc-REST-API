@@ -18,6 +18,7 @@ from services import item_defense as item_defense_service
 from services import item_stats as item_stats_service
 from services import legendary_bonuses as legendary_bonus_service
 from services.legendary_bonuses import NAMES_AND_CHANCES
+from services.item_stats import LEGENDARY_BLESS_ITEM_CHANCE
 
 from additional_functions import calculate_range
 
@@ -296,6 +297,11 @@ def calculate_item_stats(data: ItemStatsInput):
 
     logger.info(f'/item-stats - Item stats for {data.model_dump()}: {result}')
     return result
+
+@router.get('/bless-legendary-chance', tags=[item_tag])
+def bless_legendary_chance():
+    logger.info(f'/bless-legendary-chance - Bless legendary items chance: {LEGENDARY_BLESS_ITEM_CHANCE}')
+    return LEGENDARY_BLESS_ITEM_CHANCE
 
 
 @legendary_bonus_router.post('/expiration', tags=[legendary_bonus_tag], response_model=LegendaryBonusResult)

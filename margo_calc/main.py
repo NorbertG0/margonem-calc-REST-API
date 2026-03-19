@@ -4,7 +4,7 @@ from slowapi.middleware import SlowAPIMiddleware
 from slowapi.errors import RateLimitExceeded
 from api import calculator
 from limiter import limiter
-from api.calculator import router, legendary_bonus_router, config_router
+from api.calculator import router, legendary_bonus_router, config_router, hero_stats_router, item_stats_router
 from loguru import logger
 import time
 import uuid
@@ -36,5 +36,7 @@ async def ratelimit_handler(request: Request, exc):
     return JSONResponse(status_code=429, content={'message': 'Rate limit exceeded'})
 
 app.include_router(router)
+app.include_router(hero_stats_router)
+app.include_router(item_stats_router)
 app.include_router(legendary_bonus_router)
 app.include_router(config_router)

@@ -350,6 +350,22 @@ def item_class_power():
     logger.info(f'/item-class-power - Item class power')
     return ALL_JSON_DATA[key]
 
+@item_stats_router.get('/weapon-factor', tags=[item_tag])
+def weapon_factor():
+    key = 'weapon_factor'
+    if key not in ALL_JSON_DATA:
+        raise HTTPException(status_code=404, detail=f'{key} not found in data folder')
+    logger.info(f'/weapon-factor - Weapon factor')
+    return ALL_JSON_DATA[key]
+
+@item_stats_router.get('/slow-factor', tags=[item_tag])
+def slow_factor():
+    key = 'slow_factor'
+    if key not in ALL_JSON_DATA:
+        raise HTTPException(status_code=404, detail=f'{key} not found in data folder')
+    logger.info(f'/slow-factor - Slow factor')
+    return ALL_JSON_DATA[key]
+
 @legendary_bonus_router.post('/expiration', tags=[legendary_bonus_tag], response_model=LegendaryBonusResult)
 def calculate_legendary_bonus_expiration(data: LegendaryBonusInput):
     logger.info(f'/legendary-bonus/expiration - Calculating legendary bonus with input: {data.model_dump()}')

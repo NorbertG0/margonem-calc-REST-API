@@ -1,0 +1,496 @@
+{
+  "weapon_factor": [
+    {
+      "item_class": "Jednoręczne",
+      "variants": [
+        {
+          "damage_types": [
+            {
+              "type": "Zwyczajny",
+              "weapon_factor": 0.3378,
+              "spread": 0.1
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Zwyczajny",
+              "weapon_factor": 0.2646,
+              "spread": 0.1
+            },
+            {
+              "type": "Głęboka rana",
+              "weapon_factor": 0.0876,
+              "spread": 1
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Zwyczajny",
+              "weapon_factor": 0.2646,
+              "spread": 0.1
+            },
+            {
+              "type": "Trucizna",
+              "weapon_factor": 0.0797,
+              "spread": 0
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Zwyczajny",
+              "weapon_factor": 0.2869,
+              "spread": 0.1
+            },
+            {
+              "type": "Ogień",
+              "weapon_factor": 0.1594,
+              "spread": 0.2
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Zwyczajny",
+              "weapon_factor": 0.2869,
+              "spread": 0.1
+            },
+            {
+              "type": "Zimno",
+              "weapon_factor": 0.1435,
+              "spread": 0
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Zwyczajny",
+              "weapon_factor": 0.2869,
+              "spread": 0.1
+            },
+            {
+              "type": "Błyskawice",
+              "weapon_factor": 0.1594,
+              "spread": 0.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_class": "Dwuręczne",
+      "variants": [
+        {
+          "damage_types": [
+            {
+              "type": "Zwyczajny",
+              "weapon_factor": 0.5578,
+              "spread": 0.1
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Zwyczajny",
+              "weapon_factor": 0.4606,
+              "spread": 0.1
+            },
+            {
+              "type": "Głęboka rana",
+              "weapon_factor": 0.1530,
+              "spread": 1
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Zwyczajny",
+              "weapon_factor": 0.4606,
+              "spread": 0.1
+            },
+            {
+              "type": "Trucizna",
+              "weapon_factor": 0.0797,
+              "spread": 0
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Zwyczajny",
+              "weapon_factor": 0.4876,
+              "spread": 0.1
+            },
+            {
+              "type": "Ogień",
+              "weapon_factor": 0.2390,
+              "spread": 0.2
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Zwyczajny",
+              "weapon_factor": 0.4876,
+              "spread": 0.1
+            },
+            {
+              "type": "Zimno",
+              "weapon_factor": 0.2152,
+              "spread": 0
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Zwyczajny",
+              "weapon_factor": 0.4876,
+              "spread": 0.1
+            },
+            {
+              "type": "Błyskawice",
+              "weapon_factor": 0.2391,
+              "spread": 0.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_class": "Półtoraręczne",
+      "variants": [
+        {
+          "damage_types": [
+            {
+              "type": "Zwyczajny",
+              "weapon_factor": 0.3984,
+              "spread": 0.1
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Zwyczajny",
+              "weapon_factor": 0.3267,
+              "spread": 0.1
+            },
+            {
+              "type": "Głęboka rana",
+              "weapon_factor": 0.1084,
+              "spread": 1
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Zwyczajny",
+              "weapon_factor": 0.3267,
+              "spread": 0.1
+            },
+            {
+              "type": "Trucizna",
+              "weapon_factor": 0.1084,
+              "spread": 0
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Zwyczajny",
+              "weapon_factor": 0.4016,
+              "spread": 0.1
+            },
+            {
+              "type": "Ogień",
+              "weapon_factor": 0.2072,
+              "spread": 0.2
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Zwyczajny",
+              "weapon_factor": 0.4016,
+              "spread": 0.1
+            },
+            {
+              "type": "Zimno",
+              "weapon_factor": 0.1865,
+              "spread": 0
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Zwyczajny",
+              "weapon_factor": 0.4016,
+              "spread": 0.1
+            },
+            {
+              "type": "Błyskawice",
+              "weapon_factor": 0.2072,
+              "spread": 0.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_class": "Dystansowe",
+      "variants": [
+        {
+          "damage_types": [
+            {
+              "type": "Zwyczajny",
+              "weapon_factor": 0.4303,
+              "spread": 0.1
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Zwyczajny",
+              "weapon_factor": 0.2901,
+              "spread": 0.1
+            },
+            {
+              "type": "Głęboka rana",
+              "weapon_factor": 0.1036,
+              "spread": 1
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Zwyczajny",
+              "weapon_factor": 0.2901,
+              "spread": 0.1
+            },
+            {
+              "type": "Trucizna",
+              "weapon_factor": 0.1116,
+              "spread": 0
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Zwyczajny",
+              "weapon_factor": 0.2231,
+              "spread": 0.1
+            },
+            {
+              "type": "Ogień",
+              "weapon_factor": 0.2263,
+              "spread": 0.2
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Zwyczajny",
+              "weapon_factor": 0.2231,
+              "spread": 0.1
+            },
+            {
+              "type": "Zimno",
+              "weapon_factor": 0.2040,
+              "spread": 0
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Zwyczajny",
+              "weapon_factor": 0.2231,
+              "spread": 0.1
+            },
+            {
+              "type": "Błyskawice",
+              "weapon_factor": 0.2258,
+              "spread": 0.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_class": "Pomocnicze",
+      "variants": [
+        {
+          "damage_types": [
+            {
+              "type": "Zwyczajny",
+              "weapon_factor": 0.2406,
+              "spread": 0.1
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Zwyczajny",
+              "weapon_factor": 0.1897,
+              "spread": 0.1
+            },
+            {
+              "type": "Głęboka rana",
+              "weapon_factor": 0.0367,
+              "spread": 1
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Zwyczajny",
+              "weapon_factor": 0.1897,
+              "spread": 0.1
+            },
+            {
+              "type": "Trucizna",
+              "weapon_factor": 0.0335,
+              "spread": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_class": "Różdżki",
+      "variants": [
+        {
+          "damage_types": [
+            {
+              "type": "Ogień",
+              "weapon_factor": 0.3188,
+              "spread": 0.2
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Zimno",
+              "weapon_factor": 0.2709,
+              "spread": 0
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Błyskawice",
+              "weapon_factor": 0.3652,
+              "spread": 0.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_class": "Orby",
+      "variants": [
+        {
+          "damage_types": [
+            {
+              "type": "Ogień",
+              "weapon_factor": 0.1514,
+              "spread": 0.2
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Zimno",
+              "weapon_factor": 0.1355,
+              "spread": 0
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Błyskawice",
+              "weapon_factor": 0.1528,
+              "spread": 0.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_class": "Kołczany",
+      "variants": [
+        {
+          "damage_types": [
+            {
+              "type": "Zwyczajny",
+              "weapon_factor": 0.0303,
+              "spread": 0.1
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Trucizna",
+              "weapon_factor": 0.0271,
+              "spread": 0
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Ogień",
+              "weapon_factor": 0.0478,
+              "spread": 0.2
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Zimno",
+              "weapon_factor": 0.0430,
+              "spread": 0
+            }
+          ]
+        },
+        {
+          "damage_types": [
+            {
+              "type": "Błyskawice",
+              "weapon_factor": 0.0478,
+              "spread": 0.2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

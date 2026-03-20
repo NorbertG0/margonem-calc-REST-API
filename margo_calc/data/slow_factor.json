@@ -1,0 +1,96 @@
+{
+  "slow_factor": [
+    {
+      "item_class": "Jednoręczne",
+      "damage_types": [
+            {
+              "type": "Zimno",
+              "slow_factor": 0.009566
+            },
+            {
+              "type": "Trucizna",
+              "slow_factor": 0.008925
+            }
+      ]
+    },
+    {
+      "item_class": "Dwuręczne",
+      "damage_types": [
+            {
+              "type": "Zimno",
+              "slow_factor": 0.010000
+            },
+            {
+              "type": "Trucizna",
+              "slow_factor": 0.008925
+            }
+      ]
+    },
+    {
+      "item_class": "Półtoraręczne",
+      "damage_types": [
+            {
+              "type": "Zimno",
+              "slow_factor": 0.010000
+            },
+            {
+              "type": "Trucizna",
+              "slow_factor": 0.008925
+            }
+      ]
+    },
+    {
+      "item_class": "Dystansowe",
+      "damage_types": [
+            {
+              "type": "Zimno",
+              "slow_factor": 0.0073529
+            },
+            {
+              "type": "Trucizna",
+              "slow_factor": 0.0044625
+            }
+      ]
+    },
+    {
+      "item_class": "Pomocnicze",
+      "damage_types": [
+            {
+              "type": "Trucizna",
+              "slow_factor": 0.006375
+            }
+      ]
+    },
+    {
+      "item_class": "Różdżki",
+      "damage_types": [
+            {
+              "type": "Zimno",
+              "slow_factor": 0.010000
+            }
+      ]
+    },
+    {
+      "item_class": "Orby magiczne",
+      "damage_types": [
+            {
+              "type": "Zimno",
+              "slow_factor": 0.0073529
+            }
+      ]
+    },
+    {
+      "item_class": "Kołczany",
+      "damage_types": [
+            {
+              "type": "Zimno",
+              "slow_factor": 0.0073529
+            },
+            {
+              "type": "Trucizna",
+              "slow_factor": 0.0044625
+            }
+      ]
+    }
+  ]
+}

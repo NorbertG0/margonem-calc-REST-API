@@ -1,3 +1,5 @@
+***Dane do realizacji projektu pochodzą z [Mechaniki Gry Margonem](https://pomoc.margonem.pl/index/view,372)***
+
 ### Podstawowy adres: `/api/v1`
 
 ## 🧙 HERO STATS
@@ -360,6 +362,8 @@ Response:
 | `/item-stats/item-loot-chance`       | Szanse na przedmioty dla poszczególnych typów potworów         |
 | `/item-stats/item-bonus-amount`      | Ilość bonusów w przedmiotach         |
 | `/item-stats/item-class-power`       | Mnożniki mocy dla poszczególnych typów przedmiotów   |
+| `/item-stats/weapon-factor`       | Współczynnik obrażeń broni   |
+| `/item-stats/slow-factor`       | Współczynnik spowolnienia broni   |
 
 ---
 

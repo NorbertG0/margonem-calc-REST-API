@@ -1,0 +1,68 @@
+{
+  "item_class_power": [
+    {
+      "item_class": "Jednoręczne",
+      "class_power": 1.00
+    },
+    {
+      "item_class": "Dwuręczne",
+      "class_power": 1.00
+    },
+    {
+      "item_class": "Półtoraręczne",
+      "class_power": 1.00
+    },
+    {
+      "item_class": "Dystansowe",
+      "class_power": 1.00
+    },
+    {
+      "item_class": "Pomocnicze",
+      "class_power": 1.00
+    },
+    {
+      "item_class": "Różdżki",
+      "class_power": 1.00
+    },
+    {
+      "item_class": "Orby magiczne",
+      "class_power": 1.00
+    },
+    {
+      "item_class": "Zbroje",
+      "class_power": 1.00
+    },
+    {
+      "item_class": "Hełmy",
+      "class_power": 0.33
+    },
+    {
+      "item_class": "Buty",
+      "class_power": 0.30
+    },
+    {
+      "item_class": "Rękawice",
+      "class_power": 0.25
+    },
+    {
+      "item_class": "Pierścienie",
+      "class_power": 1.00
+    },
+    {
+      "item_class": "Naszyjniki",
+      "class_power": 1.00
+    },
+    {
+      "item_class": "Tarcze",
+      "class_power": 0.75
+    },
+    {
+      "item_class": "Kołczany",
+      "class_power": 1.00
+    },
+    {
+      "item_class": "Błogosławieństwa",
+      "class_power": 1.00
+    }
+  ]
+}

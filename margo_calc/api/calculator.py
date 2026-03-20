@@ -326,6 +326,30 @@ def item_rarity_amount():
     logger.info(f'/item-rarity-amount - Item rarity amount')
     return ALL_JSON_DATA[key]
 
+@item_stats_router.get('/item-loot-chance', tags=[item_tag])
+def item_lot_chance():
+    key = 'item_loot_chance'
+    if key not in ALL_JSON_DATA:
+        raise HTTPException(status_code=404, detail=f'{key} not found in data folder')
+    logger.info(f'/item-loot-chance - Item lots chance')
+    return ALL_JSON_DATA[key]
+
+@item_stats_router.get('/item-bonus-amount', tags=[item_tag])
+def item_bonus_amount():
+    key = 'item_bonus_amount'
+    if key not in ALL_JSON_DATA:
+        raise HTTPException(status_code=404, detail=f'{key} not found in data folder')
+    logger.info(f'/item-bonus-amount - Item bonus amount')
+    return ALL_JSON_DATA[key]
+
+@item_stats_router.get('/item-class-power', tags=[item_tag])
+def item_class_power():
+    key = 'item_class_power'
+    if key not in ALL_JSON_DATA:
+        raise HTTPException(status_code=404, detail=f'{key} not found in data folder')
+    logger.info(f'/item-class-power - Item class power')
+    return ALL_JSON_DATA[key]
+
 @legendary_bonus_router.post('/expiration', tags=[legendary_bonus_tag], response_model=LegendaryBonusResult)
 def calculate_legendary_bonus_expiration(data: LegendaryBonusInput):
     logger.info(f'/legendary-bonus/expiration - Calculating legendary bonus with input: {data.model_dump()}')

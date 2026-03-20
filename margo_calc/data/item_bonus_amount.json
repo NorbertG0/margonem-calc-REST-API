@@ -1,0 +1,181 @@
+{
+  "item_bonus_amount":
+          [
+            {
+              "item_class": "Jednoręczne",
+              "rarity":
+              {
+                "normal": 1,
+                "unique": 3,
+                "heroic": 6,
+                "upgraded": 7,
+                "legendary": 9
+              }
+            },
+            {
+              "item_class": "Dwuręczne",
+              "rarity":
+              {
+                "normal": 1,
+                "unique": 3,
+                "heroic": 6,
+                "upgraded": 7,
+                "legendary": 9
+              }
+            },
+            {
+              "item_class": "Półtoraręczne",
+              "rarity":
+              {
+                "normal": 1,
+                "unique": 3,
+                "heroic": 6,
+                "upgraded": 7,
+                "legendary": 9
+              }
+            },
+            {
+              "item_class": "Dystansowe",
+              "rarity":
+              {
+                "normal": 1,
+                "unique": 3,
+                "heroic": 6,
+                "upgraded": 7,
+                "legendary": 9
+              }
+            },
+            {
+              "item_class": "Pomocnicze",
+              "rarity":
+              {
+                "normal": 1,
+                "unique": 3,
+                "heroic": 6,
+                "upgraded": 7,
+                "legendary": 9
+              }
+            },
+            {
+              "item_class": "Różdżki",
+              "rarity":
+              {
+                "normal": 1,
+                "unique": 3,
+                "heroic": 6,
+                "upgraded": 7,
+                "legendary": 9
+              }
+            },
+            {
+              "item_class": "Orby magiczne",
+              "rarity":
+              {
+                "normal": 1,
+                "unique": 3,
+                "heroic": 6,
+                "upgraded": 7,
+                "legendary": 9
+              }
+            },
+            {
+              "item_class": "Zbroje",
+              "rarity":
+              {
+                "normal": 1,
+                "unique": 3,
+                "heroic": 6,
+                "upgraded": 7,
+                "legendary": 9
+              }
+            },
+            {
+              "item_class": "Hełmy",
+              "rarity":
+              {
+                "normal": 1,
+                "unique": 4,
+                "heroic": 8,
+                "upgraded": 8,
+                "legendary": 12
+              }
+            },
+            {
+              "item_class": "Buty",
+              "rarity":
+              {
+                "normal": 1,
+                "unique": 4,
+                "heroic": 4,
+                "upgraded": 8,
+                "legendary": 12
+              }
+            },
+            {
+              "item_class": "Rękawice",
+              "rarity":
+              {
+                "normal": 1,
+                "unique": 4,
+                "heroic": 8,
+                "upgraded": 8,
+                "legendary": 12
+              }
+            },
+            {
+              "item_class": "Pierścienie",
+              "rarity":
+              {
+                "normal": 5,
+                "unique": 9,
+                "heroic": 13,
+                "upgraded": 13,
+                "legendary": 17
+              }
+            },
+            {
+              "item_class": "Naszyjniki",
+              "rarity":
+              {
+                "normal": 6,
+                "unique": 10,
+                "heroic": 14,
+                "upgraded": 14,
+                "legendary": 18
+              }
+            },
+            {
+              "item_class": "Tarcze",
+              "rarity":
+              {
+                "normal": 1,
+                "unique": 3,
+                "heroic": 6,
+                "upgraded": 7,
+                "legendary": 9
+              }
+            },
+            {
+              "item_class": "Kołczany",
+              "rarity":
+              {
+                "normal": 1,
+                "unique": 3,
+                "heroic": 6,
+                "upgraded": 7,
+                "legendary": 9
+              }
+            },
+            {
+              "item_class": "Błogosławieństwa",
+              "rarity":
+              {
+                "normal": 2,
+                "unique": 3,
+                "heroic": 4,
+                "upgraded": 4,
+                "legendary": 4
+              }
+            }
+          ]
+}

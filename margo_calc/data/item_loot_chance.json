@@ -1,0 +1,181 @@
+{
+    "items_loot_chance":
+        [
+            {
+                "monster_type": "Zwykły Potwór",
+                "empty_loot": 66.5,
+                "normal": 33,
+                "unique": 0.5,
+                "heroic": 0,
+                "legendary": 0
+            },
+            {
+                "monster_type": "Elita",
+                "empty_loot": 50,
+                "normal": 45,
+                "unique": 4,
+                "heroic": 1,
+                "legendary": 0
+            },
+            {
+                "monster_type": "Elita II",
+                "empty_loot": 50,
+                "normal": 39.44,
+                "unique": 8.5,
+                "heroic": 2,
+                "legendary": 0.06
+            },
+            {
+                "monster_type": "Elita II (specjalna)",
+                "empty_loot": 50,
+                "normal": 36.925,
+                "unique": 10.5,
+                "heroic": 2.5,
+                "legendary": 0.075
+            },
+            {
+                "monster_type": "Elita III",
+                "empty_loot": 0.001,
+                "normal": 0,
+                "unique": 69.999,
+                "heroic": 25,
+                "legendary": 5
+            },
+            {
+                "monster_type": "Heros",
+                "empty_loot": 0.001,
+                "normal": 28.56,
+                "unique": 50.319,
+                "heroic": 20.41,
+                "legendary": 0.71
+            },
+            {
+                "monster_type": "Kolos",
+                "empty_loot": 0,
+                "normal": 0,
+                "unique": 70,
+                "heroic": 29.7,
+                "legendary": 0.3
+            },
+            {
+                "monster_type": "Tytan",
+                "empty_loot": 0.001,
+                "normal": 0,
+                "unique": 54.099,
+                "heroic": 45,
+                "legendary": 0.9
+            },
+            {
+                "monster_type": "Elita Wędrująca",
+                "empty_loot": 0,
+                "normal": 0,
+                "unique": 82.5,
+                "heroic": 17.36,
+                "legendary": 0.14
+            },
+            {
+                "monster_type": "Elita III Eventowa (normalny)",
+                "empty_loot": 0,
+                "normal": 15,
+                "unique": 65,
+                "heroic": 19.8,
+                "legendary": 0.2
+            },
+            {
+                "monster_type": "Elita III Eventowa (trudny)",
+                "empty_loot": 0,
+                "normal": 5,
+                "unique": 65,
+                "heroic": 29.7,
+                "legendary": 0.3
+            },
+{
+                "monster_type": "Elita III Eventowa (mistrzowski)",
+                "empty_loot": 0,
+                "normal": 0,
+                "unique": 60,
+                "heroic": 39.6,
+                "legendary": 0.4
+            },
+            {
+                "monster_type": "Heros Eventowy",
+                "empty_loot": 29,
+                "normal": 0,
+                "unique": 50,
+                "heroic": 20,
+                "legendary": 1
+            },
+            {
+                "monster_type": "Kolos Eventowy (normalny)",
+                "empty_loot": 0,
+                "normal": 0,
+                "unique": 65,
+                "heroic": 34.5,
+                "legendary": 0.5
+            },
+            {
+                "monster_type": "Kolos Eventowy (trudny)",
+                "empty_loot": 0,
+                "normal": 0,
+                "unique": 47.5,
+                "heroic": 51.75,
+                "legendary": 0.75
+            },
+            {
+                "monster_type": "Kolos Eventowy (mistrzowski)",
+                "empty_loot": 0,
+                "normal": 0,
+                "unique": 30,
+                "heroic": 69,
+                "legendary": 1
+            },
+            {
+                "monster_type": "Tytan Eventowy",
+                "empty_loot": 0,
+                "normal": 0,
+                "unique": 54,
+                "heroic": 45,
+                "legendary": 1
+            },
+            {
+                "monster_type": "Kufer pospolity z Otchłani",
+                "empty_loot": 0,
+                "normal": 75,
+                "unique": 25,
+                "heroic": 0,
+                "legendary": 0
+            },
+            {
+                "monster_type": "Kufer unikatowy z Otchłani",
+                "empty_loot": 0,
+                "normal": 0,
+                "unique": 75,
+                "heroic": 24,
+                "legendary": 1
+            },
+            {
+                "monster_type": "Kufer heroiczny z Otchłani",
+                "empty_loot": 0,
+                "normal": 0,
+                "unique": 0,
+                "heroic": 96,
+                "legendary": 4
+            },
+            {
+                "monster_type": "Skrzynia Smoczych Kowali",
+                "empty_loot": 0,
+                "normal": 0,
+                "unique": 89,
+                "heroic": 10,
+                "legendary": 1
+            },
+            {
+                "monster_type": "Doskonała skrzynia Smoczych Kowali",
+                "empty_loot": 0,
+                "normal": 0,
+                "unique": 0,
+                "heroic": 98,
+                "legendary": 2
+            }
+        ]
+}

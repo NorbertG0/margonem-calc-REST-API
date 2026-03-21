@@ -47,6 +47,7 @@ for file_path in DATA_DIR.glob("*.json"):
         key = file_path.stem
         ALL_JSON_DATA[key] = json.load(f)
 
+
 @config_router.get('/health', tags=[config_tag])
 def health():
     logger.info('/health - Health check')

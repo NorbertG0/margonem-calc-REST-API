@@ -13,6 +13,17 @@ logger.remove()
 logger.add('app.log', rotation='10 MB', retention='7 days', level='INFO', format='{time} | {level} | {message}', enqueue=True)
 app = FastAPI()
 
+version = 'v1'
+@app.get('/')
+def root_path():
+    return {
+        'name': 'margo-calc-api',
+        'version': version,
+        'status': 'ok',
+        'docs': '/docs',
+        'redoc': '/redoc',
+    }
+
 @app.middleware('http')
 async def log_requests(request: Request, call_next):
     start_time = time.time()

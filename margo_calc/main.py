@@ -2,9 +2,14 @@ from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 from slowapi.middleware import SlowAPIMiddleware
 from slowapi.errors import RateLimitExceeded
-from api import calculator
 from limiter import limiter
-from api.calculator import router, legendary_bonus_router, config_router, hero_stats_router, item_stats_router
+
+from core.config import VERSION
+from routers.legendary_bonuses import legendary_bonus_router
+from routers.config import config_router
+from routers.hero_stats import hero_stats_router
+from routers.item_stats import item_stats_router
+
 from loguru import logger
 import time
 import uuid
@@ -13,12 +18,11 @@ logger.remove()
 logger.add('app.log', rotation='10 MB', retention='7 days', level='INFO', format='{time} | {level} | {message}', enqueue=True)
 app = FastAPI()
 
-version = 'v1'
 @app.get('/')
 def root_path():
     return {
         'name': 'margo-calc-api',
-        'version': version,
+        'version': VERSION,
         'status': 'ok',
         'docs': '/docs',
         'redoc': '/redoc',
@@ -46,7 +50,6 @@ app.add_middleware(SlowAPIMiddleware)
 async def ratelimit_handler(request: Request, exc):
     return JSONResponse(status_code=429, content={'message': 'Rate limit exceeded'})
 
-app.include_router(router)
 app.include_router(hero_stats_router)
 app.include_router(item_stats_router)
 app.include_router(legendary_bonus_router)

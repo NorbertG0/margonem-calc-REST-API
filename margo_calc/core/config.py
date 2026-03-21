@@ -1,0 +1,5 @@
+VERSION = 'v1'
+CONFIG_TAG = 'Config'
+STATS_TAG = 'Hero stats'
+ITEMS_TAG = 'Items stats'
+LEGENDARY_BONUS_TAG = 'Legendary bonuses'

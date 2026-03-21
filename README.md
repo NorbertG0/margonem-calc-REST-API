@@ -1,8 +1,43 @@
 ***Dane do realizacji projektu pochodzą z [Mechaniki Gry Margonem](https://pomoc.margonem.pl/index/view,372)***
 
-### Podstawowy adres: `/api/v1`
+## Spis treści
 
-## 🧙 HERO STATS
+- [Podstawowy adres](#podstawowy-adres)
+- [🧙 Statystyki bohatera (HERO STATS)](#-statystyki-bohatera-hero-stats)
+  - [POST `/hero-stats/base-stats`](#post-hero-statsbase-stats)
+  - [POST `/hero-stats/exp-amount`](#post-hero-statsexp-amount)
+  - [POST `/hero-stats/experience`](#post-hero-statsexperience)
+  - [POST `/hero-stats/experience-penalty`](#post-hero-statsexperience-penalty)
+  - [POST `/hero-stats/highest-level`](#post-hero-statshighest-level)
+  - [POST `/hero-stats/strength`](#post-hero-statsstrength)
+  - [POST `/hero-stats/intellect`](#post-hero-statsintellect)
+  - [POST `/hero-stats/dexterity`](#post-hero-statsdexterity)
+  - [POST `/hero-stats/evade`](#post-hero-statsevade)
+  - [POST `/hero-stats/block`](#post-hero-statsblock)
+
+- [⚔️ Statystyki przedmiotów (ITEM STATS)](#-statystyki-przedmiotow-item-stats)
+  - [POST `/item-stats/item-power`](#post-item-statsitem-power)
+  - [POST `/item-stats/weapon-damage`](#post-item-statsweapon-damage)
+  - [POST `/item-stats/weapon-slow`](#post-item-statsweapon-slow)
+  - [POST `/item-stats/*-damage-reduction`](#post-item-stats--damage-reduction)
+  - [POST `/item-stats/crit-chance-gain`](#post-item-statscrit-chance-gain)
+  - [POST `/item-stats/crit-power-gain`](#post-item-statscrit-power-gain)
+  - [POST `/item-stats/item-armor`](#post-item-statsitem-armor)
+  - [POST `/item-stats/item-stats`](#post-item-statsitem-stats)
+  - [GET endpoints](#get-endpoints)
+
+- [✨ Bonusy Legendarne (LEGENDARY BONUSES)](#-bonusy-legendarne-legendary-bonuses)
+  - [POST `/legendary-bonus/expiration`](#post-legendary-bonusexpiration)
+  - [POST `/legendary-bonus/very-crit`](#post-legendary-bonusvery-crit)
+  - [POST `/legendary-bonus/holy-touch`](#post-legendary-bonusholy-touch)
+  - [POST `/legendary-bonus/anguish`](#post-legendary-bonusanguish)
+  - [GET endpoints](#get-endpoints-1)
+
+## Podstawowy adres
+
+`/api/v1`
+
+## 🧙 Statystyki bohatera (HERO STATS)
 
 ### POST `/hero-stats/base-stats`
 
@@ -31,13 +66,17 @@
 
 **Obliczanie ilości doświadczenia potrzebnego do awansu na kolejny poziom**
 
+**Request**
+
 ```json
-Request:
 {
   "level": int
 }
+```
 
-Response:
+**Response**
+
+```json
 {
   "exp_amount": float
 }
@@ -49,14 +88,18 @@ Response:
 
 **Obliczanie doświadczenia pozyskiwanego z potworów**
 
+**Request**
+
 ```json
-Request:
 {
   "player_level": int,
   "npc_level": int
 }
+```
 
-Response:
+**Response**
+
+```json
 {
   "experience": float
 }
@@ -68,14 +111,18 @@ Response:
 
 **Obliczanie redukcji doświadczenia (%)**
 
+**Request**
+
 ```json
-Request:
 {
   "player_level": int,
   "npc_level": int
 }
+```
 
-Response:
+**Response**
+
+```json
 {
   "experience_penalty": float
 }
@@ -87,14 +134,18 @@ Response:
 
 **Obliczanie najwyższego poziomu w grupie**
 
+**Request**
+
 ```json
-Request:
 {
   "server_factor": float,
   "level_ally_min": int
 }
+```
 
-Response:
+**Response**
+
+```json
 {
   "max_level": int
 }
@@ -106,15 +157,19 @@ Response:
 
 **Obliczanie statystyk zależnych od siły**
 
+**Request**
+
 ```json
-Request:
 {
   "strength": int,
   "armor_level": int,
   "level": int
 }
+```
 
-Response:
+**Response**
+
+```json
 {
   "base_hp_gain": float,
   "armor_hp_gain": float,
@@ -129,14 +184,18 @@ Response:
 
 **Obliczanie statystyk zależnych od intelektu**
 
+**Request**
+
 ```json
-Request:
 {
   "intellect": int,
   "level": int
 }
+```
 
-Response:
+**Response**
+
+```json
 {
   "absorb_limit": float,
   "crit_value_gain": float
@@ -149,13 +208,17 @@ Response:
 
 **Obliczanie statystyk zależnych od zręczności**
 
+**Request**
+
 ```json
-Request:
 {
   "dexterity": int
 }
+```
 
-Response:
+**Response**
+
+```json
 {
   "attack_speed": float,
   "evade_gain": float
@@ -168,14 +231,18 @@ Response:
 
 **Obliczanie szansy na unik (%)**
 
+**Request**
+
 ```json
-Request:
 {
   "evade": float,
   "enemy_level": int
 }
+```
 
-Response:
+**Response**
+
+```json
 {
   "evade_percentage": float
 }
@@ -187,14 +254,18 @@ Response:
 
 **Obliczanie szansy na blok (%)**
 
+**Request**
+
 ```json
-Request:
 {
   "block": float,
   "enemy_level": int
 }
+```
 
-Response:
+**Response**
+
+```json
 {
   "block_percentage": float
 }
@@ -202,20 +273,24 @@ Response:
 
 ---
 
-## ⚔️ ITEM STATS
+## ⚔️ Statystyki przedmiotów (ITEM STATS)
 
 ### POST `/item-stats/item-power`
 
 **Obliczanie współczynników rzadkości i poziomu przedmiotu**
 
+**Request**
+
 ```json
-Request:
 {
   "level": int,
   "rarity_factor": float
 }
+```
 
-Response:
+**Response**
+
+```json
 {
   "item_level_power": float,
   "item_rarity_power": float
@@ -228,16 +303,20 @@ Response:
 
 **Obliczanie wartości obrażeń broni**
 
+**Request**
+
 ```json
-Request:
 {
   "weapon_factor": float,
   "item_rarity_power": float,
   "item_level_power": float,
   "item_damage_spread": float
 }
+```
 
-Response:
+**Response**
+
+```json
 {
   "item_damage": float,
   "item_damage_top": float,
@@ -251,14 +330,18 @@ Response:
 
 **Obliczanie wartości spowolnienia broni**
 
+**Request**
+
 ```json
-Request:
 {
   "slow_factor": float,
   "item_level": int
 }
+```
 
-Response:
+**Response**
+
+```json
 {
   "item_slow": float
 }
@@ -272,14 +355,18 @@ Response:
 
 * - (physical, range, secondary, fire, frost, light)
 
+**Request**
+
 ```json
-Request:
 {
   "damage_in": float,
   "armor": float
 }
+```
 
-Response:
+**Response**
+
+```json
 {
   "damage_out": float
 }
@@ -291,14 +378,18 @@ Response:
 
 **Obliczanie wartości wzrostu szansy na cios krytyczny (%)**
 
+**Request**
+
 ```json
-Request:
 {
   "player_level": int,
   "enemy_level": int
 }
+```
 
-Response:
+**Response**
+
+```json
 {
   "crit_chance_gain": float
 }
@@ -310,14 +401,18 @@ Response:
 
 **Obliczanie wartości wzrostu mocy ciosu krytycznego**
 
+**Request**
+
 ```json
-Request:
 {
   "player_level": int,
   "enemy_level": int
 }
+```
 
-Response:
+**Response**
+
+```json
 {
   "crit_power_gain": float
 }
@@ -329,16 +424,20 @@ Response:
 
 **Obliczanie wartości pancerza przedmiotu**
 
+**Request**
+
 ```json
-Request:
 {
   "armor_factor": float,
   "class_power": float,
   "rarity_power": float,
   "level_power": float
 }
+```
 
-Response:
+**Response**
+
+```json
 {
   "armor": float
 }
@@ -367,47 +466,45 @@ Response:
 
 ---
 
-## ✨ LEGENDARY BONUS
+## ✨ Bonusy Legendarne (LEGENDARY BONUSES)
 
 ### POST `/legendary-bonus/expiration`
 
 **Obliczanie poziomu osłabienia i wygaśnięcia bonusu legendarnego**
 
+**Request**
+
 ```json
-Request:
 {
   "item_level": int
 }
+```
 
-Response:
+**Response**
+
+```json
 {
   "first_nerf_level": int,
   "expiration_level": int
 }
 ```
 
----
-
-### GET endpoints
-
-| Endpoint                             | Opis       |
-| ------------------------------------ | ------------------- |
-| `/legendary-bonus/bonuses` | Lista wszystkich bonusów legendarnych |
-
----
-
 ### POST `/legendary-bonus/very-crit`
 
 **Obliczanie szansy i mocy ciosu bardzo krytycznego**
 
+**Request**
+
 ```json
-Request:
 {
   "crit_chance": float,
   "crit_power": float
 }
+```
 
-Response:
+**Response**
+
+```json
 {
   "very_crit_chance": float,
   "very_crit_power": float
@@ -420,13 +517,17 @@ Response:
 
 **Obliczanie wartości leczenia dotyku anioła**
 
+**Request**
+
 ```json
-Request:
 {
   "hp": float
 }
+```
 
-Response:
+**Response**
+
+```json
 {
   "healing_per_round": float,
   "rounds": int,
@@ -440,18 +541,30 @@ Response:
 
 **Obliczanie wartości obrażeń krwawej udręki**
 
+**Request**
+
 ```json
-Request:
 {
   "level": int,
   "strength": int,
   "intellect": int,
   "agility": int
 }
+```
 
-Response:
+**Response**
+
+```json
 {
   "damage": float
 }
 ```
+---
 
+### GET endpoints
+
+| Endpoint                             | Opis       |
+| ------------------------------------ | ------------------- |
+| `/legendary-bonus/bonuses` | Lista wszystkich bonusów legendarnych |
+
+---

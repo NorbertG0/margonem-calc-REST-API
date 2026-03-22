@@ -4,7 +4,7 @@ from slowapi.middleware import SlowAPIMiddleware
 from slowapi.errors import RateLimitExceeded
 from limiter import limiter
 
-from core.config import VERSION
+from core.config import VERSION, ROOT_PATH_TAG
 from routers.legendary_bonuses import legendary_bonus_router
 from routers.config import config_router
 from routers.hero_stats import hero_stats_router
@@ -18,7 +18,7 @@ logger.remove()
 logger.add('app.log', rotation='10 MB', retention='7 days', level='INFO', format='{time} | {level} | {message}', enqueue=True)
 app = FastAPI()
 
-@app.get('/')
+@app.get('/', tags=[ROOT_PATH_TAG])
 def root_path():
     return {
         'name': 'margo-calc-api',

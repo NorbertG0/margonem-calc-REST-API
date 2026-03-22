@@ -1,4 +1,5 @@
 VERSION = 'v1'
+ROOT_PATH_TAG = 'Root path'
 CONFIG_TAG = 'Config'
 STATS_TAG = 'Hero stats'
 ITEMS_TAG = 'Items stats'

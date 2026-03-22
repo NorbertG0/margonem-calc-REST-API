@@ -463,6 +463,8 @@
 | `/item-stats/item-class-power`       | Mnożniki mocy dla poszczególnych typów przedmiotów   |
 | `/item-stats/weapon-factor`       | Współczynnik obrażeń broni   |
 | `/item-stats/slow-factor`       | Współczynnik spowolnienia broni   |
+| `/item-stats/item-manual-bonuses`       | Lista bonusów w przedmiotach nadawana manualnie  |
+| `/item-stats/item-actions`       | Lista dostępnych akcji przedmiotów  |
 
 ---
 

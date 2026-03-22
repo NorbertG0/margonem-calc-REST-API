@@ -29,7 +29,6 @@ def legendary_bonuses_names_and_chances():
     key = 'legendary_bonuses'
     if key not in ALL_JSON_DATA:
         raise HTTPException(status_code=404, detail=f'{key} not found in data folder')
-    logger.info(f'/legendary-bonus/bonuses - Legendary bonuses')
     return ALL_JSON_DATA[key]
 
 @legendary_bonus_router.post('/very-crit', tags=[LEGENDARY_BONUS_TAG], response_model=VeryCritResult)

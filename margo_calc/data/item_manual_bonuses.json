@@ -1,0 +1,61 @@
+{
+  "item_manual_bonuses":
+          [
+            {
+              "bonus": "Kontra",
+              "bouns_amount": [
+                {
+                  "amount": 1,
+                  "class_1": 0.4,
+                  "class_2": 0.5,
+                  "class_3": 0.5
+                },
+                {
+                  "amount": 2,
+                  "class_1": 0.6,
+                  "class_2": 0.6,
+                  "class_3": 0.6
+                }
+              ]
+            },
+            {
+              "bonus": "Przebicie pancerza",
+              "bouns_amount": [
+                {
+                  "amount": 1,
+                  "class_1": 0.15,
+                  "class_2": 0.2,
+                  "class_3": 0.2
+                },
+                {
+                  "amount": 2,
+                  "class_1": 0.25,
+                  "class_2": 0.25,
+                  "class_3": 0.25
+                }
+              ]
+            },
+            {
+              "bonus": "Blok przebicia",
+              "bouns_amount": [
+                {
+                  "amount": 1,
+                  "class_1": 0.4,
+                  "class_2": 0.5,
+                  "class_3": 0.6
+                }
+              ]
+            },
+            {
+              "bonus": "Głęboka rana",
+              "bouns_amount": [
+                {
+                  "amount": 0,
+                  "class_1": 0.2,
+                  "class_2": 0.23,
+                  "class_3": 0.25
+                }
+              ]
+            }
+          ]
+}

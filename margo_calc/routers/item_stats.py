@@ -208,3 +208,11 @@ def slow_factor():
         raise HTTPException(status_code=404, detail=f'{key} not found in data folder')
     logger.info(f'/slow-factor - Slow factor')
     return ALL_JSON_DATA[key]
+
+@item_stats_router.get('/item-manual-bonuses', tags=[ITEMS_TAG])
+def item_manual_bonuses():
+    key = 'item_manual_bonuses'
+    if key not in ALL_JSON_DATA:
+        raise HTTPException(status_code=404, detail=f'{key} not found in data folder')
+    logger.info(f'/item-manual-bonuses - Item manual bonuses')
+    return ALL_JSON_DATA[key]

@@ -465,6 +465,7 @@
 | `/item-stats/slow-factor`       | Współczynnik spowolnienia broni   |
 | `/item-stats/item-manual-bonuses`       | Lista bonusów w przedmiotach nadawana manualnie  |
 | `/item-stats/item-actions`       | Lista dostępnych akcji przedmiotów  |
+| `/item-stats/item-upgrade-level-factor`       | Współczynnik poziomu ulepszenia przedmiotu  |
 
 ---
 

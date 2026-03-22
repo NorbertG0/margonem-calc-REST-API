@@ -158,7 +158,6 @@ def bless_legendary_chance():
     key = 'legendary_bless_item_chance'
     if key not in ALL_JSON_DATA:
         raise HTTPException(status_code=404, detail=f'{key} not found in data folder')
-    logger.info(f'/bless-legendary-chance - Bless legendary items chance')
     return ALL_JSON_DATA[key]
 
 @item_stats_router.get('/item-rarity-amount', tags=[ITEMS_TAG])
@@ -166,7 +165,6 @@ def item_rarity_amount():
     key = 'item_rarity_amount'
     if key not in ALL_JSON_DATA:
         raise HTTPException(status_code=404, detail=f'{key} not found in data folder')
-    logger.info(f'/item-rarity-amount - Item rarity amount')
     return ALL_JSON_DATA[key]
 
 @item_stats_router.get('/item-loot-chance', tags=[ITEMS_TAG])
@@ -174,7 +172,6 @@ def item_lot_chance():
     key = 'item_loot_chance'
     if key not in ALL_JSON_DATA:
         raise HTTPException(status_code=404, detail=f'{key} not found in data folder')
-    logger.info(f'/item-loot-chance - Item lots chance')
     return ALL_JSON_DATA[key]
 
 @item_stats_router.get('/item-bonus-amount', tags=[ITEMS_TAG])
@@ -182,7 +179,6 @@ def item_bonus_amount():
     key = 'item_bonus_amount'
     if key not in ALL_JSON_DATA:
         raise HTTPException(status_code=404, detail=f'{key} not found in data folder')
-    logger.info(f'/item-bonus-amount - Item bonus amount')
     return ALL_JSON_DATA[key]
 
 @item_stats_router.get('/item-class-power', tags=[ITEMS_TAG])
@@ -190,7 +186,6 @@ def item_class_power():
     key = 'item_class_power'
     if key not in ALL_JSON_DATA:
         raise HTTPException(status_code=404, detail=f'{key} not found in data folder')
-    logger.info(f'/item-class-power - Item class power')
     return ALL_JSON_DATA[key]
 
 @item_stats_router.get('/weapon-factor', tags=[ITEMS_TAG])
@@ -198,7 +193,6 @@ def weapon_factor():
     key = 'weapon_factor'
     if key not in ALL_JSON_DATA:
         raise HTTPException(status_code=404, detail=f'{key} not found in data folder')
-    logger.info(f'/weapon-factor - Weapon factor')
     return ALL_JSON_DATA[key]
 
 @item_stats_router.get('/slow-factor', tags=[ITEMS_TAG])
@@ -206,7 +200,6 @@ def slow_factor():
     key = 'slow_factor'
     if key not in ALL_JSON_DATA:
         raise HTTPException(status_code=404, detail=f'{key} not found in data folder')
-    logger.info(f'/slow-factor - Slow factor')
     return ALL_JSON_DATA[key]
 
 @item_stats_router.get('/item-manual-bonuses', tags=[ITEMS_TAG])
@@ -214,5 +207,11 @@ def item_manual_bonuses():
     key = 'item_manual_bonuses'
     if key not in ALL_JSON_DATA:
         raise HTTPException(status_code=404, detail=f'{key} not found in data folder')
-    logger.info(f'/item-manual-bonuses - Item manual bonuses')
+    return ALL_JSON_DATA[key]
+
+@item_stats_router.get('/item-actions', tags=[ITEMS_TAG])
+def item_actions():
+    key = 'item_actions'
+    if key not in ALL_JSON_DATA:
+        raise HTTPException(status_code=404, detail=f'{key} not found in data folder')
     return ALL_JSON_DATA[key]

@@ -1,0 +1,95 @@
+{
+  "item_actions":
+          [
+            {
+              "action": "Założenie",
+              "allowed_related": true,
+              "allowed_perm_related": true
+            },
+            {
+              "action": "Przełożenie w torbie",
+              "allowed_related": true,
+              "allowed_perm_related": true
+            },
+            {
+              "action": "Zniszczenie",
+              "allowed_related": true,
+              "allowed_perm_related": true
+            },
+            {
+              "action": "Wyrzucenie",
+              "allowed_related": false,
+              "allowed_perm_related": false
+            },
+            {
+              "action": "Wystawienie na aukcję",
+              "allowed_related": true,
+              "allowed_perm_related": false
+            },
+            {
+              "action": "Przechowanie w depozycie",
+              "allowed_related": true,
+              "allowed_perm_related": true
+            },
+            {
+              "action": "Przechowanie w depozycie klanowym",
+              "allowed_related": false,
+              "allowed_perm_related": false
+            },
+            {
+              "action": "Przesłanie pocztą",
+              "allowed_related": false,
+              "allowed_perm_related": false
+            },
+            {
+              "action": "Sprzedanie u handlarza",
+              "allowed_related": true,
+              "allowed_perm_related": true
+            },
+            {
+              "action": "Przekazanie w handlu",
+              "allowed_related": false,
+              "allowed_perm_related": false
+            },
+            {
+              "action": "Ulepszenie",
+              "allowed_related": true,
+              "allowed_perm_related": true
+            },
+            {
+              "action": "Ekstrakcja",
+              "allowed_related": true,
+              "allowed_perm_related": true
+            },
+            {
+              "action": "Rozbicie",
+              "allowed_related": true,
+              "allowed_perm_related": true
+            },
+            {
+              "action": "Przekucie",
+              "allowed_related": true,
+              "allowed_perm_related": true
+            },
+            {
+              "action": "Obniżenie wymagań",
+              "allowed_related": true,
+              "allowed_perm_related": true
+            },
+            {
+              "action": "Pokazywanie w handlu",
+              "allowed_related": true,
+              "allowed_perm_related": true
+            },
+            {
+              "action": "Pokazywanie na Czacie",
+              "allowed_related": true,
+              "allowed_perm_related": true
+            },
+            {
+              "action": "Odwiązanie",
+              "allowed_related": true,
+              "allowed_perm_related": false
+            }
+          ]
+}

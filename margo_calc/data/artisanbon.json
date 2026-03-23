@@ -1,0 +1,33 @@
+{
+  "artisanbon":
+          [
+            {
+              "source": "Handlarze przedmiotów za złoto",
+              "artisanbon": 0
+            },
+            {
+              "source": "Kolos wiosenny (event)",
+              "artisanbon": 250
+            },
+            {
+              "source": "Kolos jesienny (event)",
+              "artisanbon": 250
+            },
+            {
+              "source": "Elity III Eventowe",
+              "artisanbon": 150
+            },
+            {
+              "source": "Skrzynia z Otchłani",
+              "artisanbon": 250
+            },
+            {
+              "source": "Skrzynia Smoczych Kowali",
+              "artisanbon": 250
+            },
+            {
+              "source": "Pozostałe",
+              "artisanbon": 100
+            }
+          ]
+}

@@ -23,7 +23,11 @@
             },
             {
               "source": "Skrzynia Smoczych Kowali",
-              "artisanbon": 250
+              "artisanbon":
+                      [
+                        150, 175, 200,
+                        225, 250
+                      ]
             },
             {
               "source": "Pozostałe",

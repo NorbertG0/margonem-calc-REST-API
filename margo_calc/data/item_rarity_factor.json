@@ -1,0 +1,30 @@
+{
+  "item_rarity_factor":
+          [
+            {
+              "rarity": "Pospolity",
+              "upgrade_rarity_factor": 1,
+              "upgrade_gold_factor": 1
+            },
+            {
+              "rarity": "Unikatowy",
+              "upgrade_rarity_factor": 10,
+              "upgrade_gold_factor": 10
+            },
+            {
+              "rarity": "Heroiczny",
+              "upgrade_rarity_factor": 100,
+              "upgrade_gold_factor": 30
+            },
+            {
+              "rarity": "Ulepszony",
+              "upgrade_rarity_factor": null,
+              "upgrade_gold_factor": 40
+            },
+            {
+              "rarity": "Legendarny",
+              "upgrade_rarity_factor": 1000,
+              "upgrade_gold_factor": 60
+            }
+          ]
+}

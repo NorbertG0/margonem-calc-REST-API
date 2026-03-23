@@ -222,3 +222,10 @@ def item_upgrade_level_factor():
     if key not in ALL_JSON_DATA:
         raise HTTPException(status_code=404, detail=f'{key} not found in data folder')
     return ALL_JSON_DATA[key]
+
+@item_stats_router.get('/item-rarity-factor', tags=[ITEMS_TAG])
+def item_rarity_factor():
+    key = 'item_rarity_factor'
+    if key not in ALL_JSON_DATA:
+        raise HTTPException(status_code=404, detail=f'{key} not found in data folder')
+    return ALL_JSON_DATA[key]

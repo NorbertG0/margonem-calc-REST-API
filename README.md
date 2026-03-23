@@ -466,6 +466,8 @@
 | `/item-stats/item-manual-bonuses`       | Lista bonusów w przedmiotach nadawana manualnie  |
 | `/item-stats/item-actions`       | Lista dostępnych akcji przedmiotów  |
 | `/item-stats/item-upgrade-level-factor`       | Współczynnik poziomu ulepszenia przedmiotu  |
+| `/item-stats/item-rarity-factor`       | Współczynniki zależne od rzadkości przedmiotu  |
+| `/item-stats/artisanbon`       | Mnożniki wartości rzemieślniczej  |
 
 ---
 

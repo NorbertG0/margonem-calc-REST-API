@@ -1,5 +1,7 @@
 ***Dane do realizacji projektu pochodzą z [Mechaniki Gry Margonem](https://pomoc.margonem.pl/index/view,372)***
 
+**Stack: FastAPI, Pydantic, Docker, pytest**
+
 ## Spis treści
 
 - [Podstawowy adres](#podstawowy-adres)
